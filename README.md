@@ -1,7 +1,7 @@
 # WISC-SP13
-Term project for CS552. Complete functional design of a microprocessor called the WISC-SP13 and cache modules written in Verilog. 
+Term project for [CS 552](http://pages.cs.wisc.edu/~karu/courses/cs552/fall2020/wiki/index.php/Main/HomePage). Complete functional design of a microprocessor called the WISC-SP13 and cache modules written in Verilog. Project information provide by the instructors of this class was adapted and changed to make this readme.
 
-In order to run the processor, you will need a deveoplent simmilar to the CS Lab machines at UW Madison with the correct version of ModelSim. Unfortunatly I do not know how to do this, and cannot distrubute a Docker image as the programs needed to run this software reuired a paid licence.
+In order to run the processor, you will need a deveoplent enviroment simmilar to the CS Lab machines at UW Madison. Unfortunatly I do not know how set this up, and cannot distrubute a Docker image as a paid licence is needed to run some of the programs used.
 
 ## Micro architecture Specifications
 The WISC-SP13 architecture is similar to the MIPS R2000 in the way it includes a load/store architecture and three fixed-length instruction formats. WISC-SP13 is diffrent from MIPS R2000 due to the smaller instruction set and use 16-bit words.
@@ -17,7 +17,7 @@ Demo 1 uses a single cycle perfect memory to create an unpiplined implemetnation
 note: I was unable to implement the extra credit sciic instruction.
 
 | Instruction Format | Syntax | Description |
-| :-- | --- | --- |
+| :-- | :-- | :-- |
 | 00000 xxxxxxxxxxx | HALT | Cease instruction issue, dump memory state to file |
 | 00001 xxxxxxxxxxx | NOP |  |
 | 01000 sss ddd iiiii | ADDI Rd, Rs, immediate | Rd <- Rs + I(sign ext.) |
