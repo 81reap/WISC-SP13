@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : cell
+Design : mem_system
+Version: Q-2019.12-SP3
+Date   : Tue Dec 15 00:52:52 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U3                        NOR3X1          gscl45nm        2.815800  
+U4                        INVX4           gscl45nm        3.285100  
+U5                        INVX1           gscl45nm        1.407900  
+U6                        INVX2           gscl45nm        1.877200  
+U7                        INVX1           gscl45nm        1.407900  
+U8                        INVX1           gscl45nm        1.407900  
+U9                        INVX1           gscl45nm        1.407900  
+U10                       BUFX2           gscl45nm        2.346500  
+U11                       INVX4           gscl45nm        3.285100  
+U12                       INVX1           gscl45nm        1.407900  
+U13                       INVX1           gscl45nm        1.407900  
+c0                        cache_cache_id0                 47397.891295
+                                                                    h, n, p
+c1                        cache_cache_id2                 47962.459180
+                                                                    h, n, p
+dff0[0]                   dff_218                         11.732500 h, n
+dff0[1]                   dff_219                         11.732500 h, n
+dff0[2]                   dff_220                         11.732500 h, n
+dff0[3]                   dff_221                         11.732500 h, n
+dff0[4]                   dff_222                         11.732500 h, n
+logic                     mem_system_logic                1099.569881
+                                                                    h, n
+mem                       four_bank_mem                   22487.447688
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 20 cells                                            119028.087642
+1

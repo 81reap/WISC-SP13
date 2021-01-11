@@ -1,0 +1,37 @@
+Information: Updating graph... (UID-83)
+Warning: Design 'mem_system' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : reference
+Design : mem_system
+Version: Q-2019.12-SP3
+Date   : Sat Dec 12 17:09:13 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX2              gscl45nm       2.346500       3      7.039500  
+INVX1              gscl45nm       1.407900       6      8.447400  
+OR2X2              gscl45nm       2.815800       1      2.815800  
+cache_cache_id0               46868.990199       1  46868.990199  h, n
+dff_216                          11.732500       1     11.732500  h, n
+dff_217                          11.732500       1     11.732500  h, n
+dff_218                          11.732500       1     11.732500  h, n
+dff_219                          11.732500       1     11.732500  h, n
+dff_220                          11.732500       1     11.732500  h, n
+four_bank_mem                 22493.548588       1  22493.548588  h, n
+mem_system_logic                735.862387       1    735.862387  h, n
+-----------------------------------------------------------------------------
+Total 11 references                                 70175.366372
+1

@@ -1,0 +1,48 @@
+Information: Updating graph... (UID-83)
+Warning: Design 'mem_system' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Timing loop detected. (OPT-150)
+	logic/U485/B logic/U485/Y c1/U62/A c1/U62/Y c1/U22/A c1/U22/Y c1/U87/A c1/U87/Y c1/U153/B c1/U153/Y c1/U61/A c1/U61/Y c1/U18/A c1/U18/Y c1/mem_tg/U94/A c1/mem_tg/U94/Y c1/mem_tg/U639/A c1/mem_tg/U639/Y c1/mem_tg/U681/B c1/mem_tg/U681/Y c1/U71/A c1/U71/Y c1/U86/A c1/U86/Y c1/U154/B c1/U154/Y c1/U155/A c1/U155/Y c1/U95/A c1/U95/Y logic/U259/A logic/U259/Y 
+Information: Timing loop detected. (OPT-150)
+	c1/U89/A c1/U89/Y c1/mem_vl/U38/A c1/mem_vl/U38/Y c1/mem_vl/U1136/A c1/mem_vl/U1136/Y c1/U135/A c1/U135/Y logic/U484/B logic/U484/Y logic/U485/C logic/U485/Y c1/U62/A c1/U62/Y c1/U22/A c1/U22/Y c1/U87/A c1/U87/Y c1/U153/B c1/U153/Y c1/U61/A c1/U61/Y 
+Warning: Disabling timing arc between pins 'A' and 'Y' on cell 'c1/U22'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A' and 'Y' on cell 'logic/U77'
+         to break a timing loop. (OPT-314)
+ 
+****************************************
+Report : reference
+Design : mem_system
+Version: Q-2019.12-SP3
+Date   : Tue Dec 15 00:52:51 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+BUFX2              gscl45nm       2.346500       1      2.346500  
+INVX1              gscl45nm       1.407900       6      8.447400  
+INVX2              gscl45nm       1.877200       1      1.877200  
+INVX4              gscl45nm       3.285100       2      6.570200  
+NOR3X1             gscl45nm       2.815800       1      2.815800  
+cache_cache_id0               47397.891295       1  47397.891295  h, n
+cache_cache_id2               47962.459180       1  47962.459180  h, n
+dff_218                          11.732500       1     11.732500  h, n
+dff_219                          11.732500       1     11.732500  h, n
+dff_220                          11.732500       1     11.732500  h, n
+dff_221                          11.732500       1     11.732500  h, n
+dff_222                          11.732500       1     11.732500  h, n
+four_bank_mem                 22487.447688       1  22487.447688  h, n
+mem_system_logic               1099.569881       1   1099.569881  h, n
+-----------------------------------------------------------------------------
+Total 14 references                                 119028.087642
+1

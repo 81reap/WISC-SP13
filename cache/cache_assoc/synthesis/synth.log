@@ -1,0 +1,1157 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version Q-2019.12-SP3 for linux64 - Apr 21, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+echo "********** CS552 Reading files begin ********************"
+********** CS552 Reading files begin ********************
+set my_verilog_files [list cache.v dff.v final_memory.syn.v four_bank_mem.v memc.syn.v mem_system.v mem_system_logic.v memv.syn.v  ]
+cache.v dff.v final_memory.syn.v four_bank_mem.v memc.syn.v mem_system.v mem_system_logic.v memv.syn.v
+set my_toplevel mem_system
+mem_system
+define_design_lib WORK -path ./WORK
+1
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Compiling source file ./cache.v
+Warning:  ./cache.v:47: the undeclared symbol 'go' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:48: the undeclared symbol 'match' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:52: the undeclared symbol 'wr_word0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:53: the undeclared symbol 'wr_word1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:54: the undeclared symbol 'wr_word2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:55: the undeclared symbol 'wr_word3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:57: the undeclared symbol 'wr_dirty' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:58: the undeclared symbol 'wr_tag' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:59: the undeclared symbol 'wr_valid' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:60: the undeclared symbol 'dirty_in' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:68: the undeclared symbol 'dirtybit' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./cache.v:69: the undeclared symbol 'validbit' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./dff.v
+Warning:  ./dff.v:15: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./final_memory.syn.v
+Warning:  ./final_memory.syn.v:80: the undeclared symbol 'rd0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:81: the undeclared symbol 'wr0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:86: the undeclared symbol 'rd1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:87: the undeclared symbol 'wr1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:96: the undeclared symbol 'rd2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:97: the undeclared symbol 'wr2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:98: the undeclared symbol 'rd3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:99: the undeclared symbol 'wr3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./final_memory.syn.v:101: the undeclared symbol 'busy' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./four_bank_mem.v
+Warning:  ./final_memory.syn.v:105: The statements in initial blocks are ignored. (VER-281)
+Warning:  ./four_bank_mem.v:81: the undeclared symbol 'sel0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:82: the undeclared symbol 'sel1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:83: the undeclared symbol 'sel2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:84: the undeclared symbol 'sel3' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:98: the undeclared symbol 'err0' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:100: the undeclared symbol 'err1' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:102: the undeclared symbol 'err2' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  ./four_bank_mem.v:104: the undeclared symbol 'err3' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file ./memc.syn.v
+Compiling source file ./mem_system.v
+Compiling source file ./mem_system_logic.v
+Compiling source file ./memv.syn.v
+Presto compilation completed successfully.
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+1
+elaborate $my_toplevel -architecture verilog
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (mem_system)
+Elaborated 1 design.
+Current design is now 'mem_system'.
+Information: Building the design 'cache' instantiated from design 'mem_system' with
+	the parameters "0". (HDL-193)
+Warning:  ./cache.v:39: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:40: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:41: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:42: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:43: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:44: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully. (cache_cache_id0)
+Information: Building the design 'cache' instantiated from design 'mem_system' with
+	the parameters "2". (HDL-193)
+Warning:  ./cache.v:39: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:40: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:41: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:42: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:43: signed to unsigned assignment occurs. (VER-318)
+Warning:  ./cache.v:44: signed to unsigned assignment occurs. (VER-318)
+Presto compilation completed successfully. (cache_cache_id2)
+Information: Building the design 'four_bank_mem'. (HDL-193)
+Presto compilation completed successfully. (four_bank_mem)
+Information: Building the design 'dff'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff line 17 in file
+		'./dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dff)
+Information: Building the design 'mem_system_logic'. (HDL-193)
+
+Statistics for case statements in always block at line 121 in file
+	'./mem_system_logic.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           140            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine mem_system_logic line 121 in file
+		'./mem_system_logic.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     n_state_reg     | Latch |   5   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully. (mem_system_logic)
+Information: Building the design 'memc' instantiated from design 'cache_cache_id0' with
+	the parameters "16". (HDL-193)
+
+Inferred memory devices in process
+	in routine memc_Size16 line 25 in file
+		'./memc.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|  memc_Size16/23  |   32   |   16    |      5       |
+======================================================
+Presto compilation completed successfully. (memc_Size16)
+Information: Building the design 'memc' instantiated from design 'cache_cache_id0' with
+	the parameters "5". (HDL-193)
+
+Inferred memory devices in process
+	in routine memc_Size5 line 25 in file
+		'./memc.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  160  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|  memc_Size5/23   |   32   |    5    |      5       |
+======================================================
+Presto compilation completed successfully. (memc_Size5)
+Information: Building the design 'memc' instantiated from design 'cache_cache_id0' with
+	the parameters "1". (HDL-193)
+
+Inferred memory devices in process
+	in routine memc_Size1 line 25 in file
+		'./memc.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|  memc_Size1/23   |   32   |    1    |      5       |
+======================================================
+Presto compilation completed successfully. (memc_Size1)
+Information: Building the design 'memv'. (HDL-193)
+
+Inferred memory devices in process
+	in routine memv line 24 in file
+		'./memv.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|     memv/22      |  256   |    1    |      8       |
+======================================================
+Presto compilation completed successfully. (memv)
+Information: Building the design 'final_memory'. (HDL-193)
+
+Inferred memory devices in process
+	in routine final_memory line 110 in file
+		'./final_memory.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  264  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (final_memory)
+1
+echo "********** CS552 Reading files end ********************"
+********** CS552 Reading files end ********************
+current_design $my_toplevel
+Current design is 'mem_system'.
+{mem_system}
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+set my_clock_pin clk
+clk
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 1000
+1000
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 0.1
+0.1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 0.1
+0.1
+#/**************************************************/
+#/* No modifications needed below                  */
+#/**************************************************/
+set verilogout_show_unconnected_pins "true"
+true
+# analyze -f verilog $my_verilog_files
+# elaborate $my_toplevel -architecture verilog
+# current_design $my_toplevel
+report_hierarchy 
+ 
+****************************************
+Report : hierarchy
+Design : mem_system
+Version: Q-2019.12-SP3
+Date   : Tue Dec 15 00:50:46 2020
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+mem_system
+    GTECH_OR2                                gtech
+    cache_cache_id0
+        GTECH_AND2                           gtech
+        GTECH_BUF                            gtech
+        GTECH_NOT                            gtech
+        GTECH_OR2                            gtech
+        memc_Size1
+            GTECH_AND2                       gtech
+            GTECH_AND3                       gtech
+            GTECH_BUF                        gtech
+            GTECH_NOT                        gtech
+            GTECH_OR2                        gtech
+        memc_Size5
+            GTECH_AND2                       gtech
+            GTECH_AND3                       gtech
+            GTECH_BUF                        gtech
+            GTECH_NOT                        gtech
+            GTECH_OR2                        gtech
+        memc_Size16
+            GTECH_AND2                       gtech
+            GTECH_AND3                       gtech
+            GTECH_BUF                        gtech
+            GTECH_NOT                        gtech
+            GTECH_OR2                        gtech
+        memv
+            GTECH_AND2                       gtech
+            GTECH_BUF                        gtech
+            GTECH_NOT                        gtech
+            GTECH_OR2                        gtech
+    cache_cache_id2
+        GTECH_AND2                           gtech
+        GTECH_BUF                            gtech
+        GTECH_NOT                            gtech
+        GTECH_OR2                            gtech
+        memc_Size1
+            ...
+        memc_Size5
+            ...
+        memc_Size16
+            ...
+        memv
+            ...
+    dff
+        GTECH_BUF                            gtech
+        GTECH_NOT                            gtech
+    four_bank_mem
+        GTECH_AND2                           gtech
+        GTECH_NOT                            gtech
+        GTECH_OR2                            gtech
+        dff
+            ...
+        final_memory
+            GTECH_AND2                       gtech
+            GTECH_AND8                       gtech
+            GTECH_BUF                        gtech
+            GTECH_NOT                        gtech
+            GTECH_OR2                        gtech
+            dff
+                ...
+    mem_system_logic
+        GTECH_AND2                           gtech
+        GTECH_BUF                            gtech
+        GTECH_NOT                            gtech
+        GTECH_OR2                            gtech
+        dff
+            ...
+1
+link
+
+  Linking design 'mem_system'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gscl45nm (library)          /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db
+
+1
+uniquify
+Information: Uniquified 223 instances of design 'dff'. (OPT-1056)
+Information: Uniquified 8 instances of design 'memc_Size16'. (OPT-1056)
+Information: Uniquified 2 instances of design 'memc_Size5'. (OPT-1056)
+Information: Uniquified 2 instances of design 'memc_Size1'. (OPT-1056)
+Information: Uniquified 2 instances of design 'memv'. (OPT-1056)
+Information: Uniquified 4 instances of design 'final_memory'. (OPT-1056)
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+{clk}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+} 
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+1
+compile 
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'mem_system'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 247 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'dff_216'
+  Processing 'mem_system_logic'
+  Processing 'final_memory_0'
+  Processing 'final_memory_3'
+  Processing 'four_bank_mem'
+  Processing 'memv_0'
+  Processing 'memc_Size1_0'
+  Processing 'memc_Size5_0'
+  Processing 'memc_Size16_0'
+  Processing 'cache_cache_id2'
+  Processing 'cache_cache_id0'
+  Processing 'mem_system'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Timing loop detected. (OPT-150)
+	c1/U22/A c1/U22/Y c1/U21/B c1/U21/Y c1/U5/A c1/U5/Y logic/U76/A logic/U76/Y logic/U75/B logic/U75/Y 
+Information: Timing loop detected. (OPT-150)
+	logic/U77/A logic/U77/Y c0/U22/A c0/U22/Y c0/U21/B c0/U21/Y c0/U5/A c0/U5/Y logic/U178/A logic/U178/Y 
+Warning: Disabling timing arc between pins 'A' and 'Y' on cell 'c1/U22'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A' and 'Y' on cell 'logic/U77'
+         to break a timing loop. (OPT-314)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'cache_cache_id2_DW01_cmp6_0'
+  Processing 'cache_cache_id0_DW01_cmp6_0_DW01_cmp6_1'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:10  107042.2      2.92   15795.1      64.6                          
+    0:00:10  107042.2      2.92   15795.1      64.6                          
+    0:00:10  107038.9      2.92   15795.1      64.6                          
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:19  113011.2      2.35   12743.0      37.5                          
+    0:00:19  113011.2      2.35   12743.0      37.5                          
+    0:00:20  113302.2      0.61    2310.9      37.0                          
+    0:00:27  119810.9      0.27    1017.7      19.1                          
+    0:00:28  119810.9      0.27    1017.7      19.1                          
+    0:00:28  119810.9      0.27    1017.7      19.1                          
+    0:00:28  119810.9      0.27    1017.7      19.1                          
+    0:00:28  119810.9      0.27    1017.7      19.1                          
+    0:00:32  112672.8      0.49    1854.3      15.5                          
+    0:00:33  112679.9      0.41    1600.4      15.5                          
+    0:00:34  112682.2      0.47    1770.3      15.5                          
+    0:00:34  112681.3      0.39    1557.0      15.5                          
+    0:00:35  112685.0      0.38    1512.9      15.5                          
+    0:00:35  112684.1      0.38    1439.9      15.5                          
+    0:00:35  112687.4      0.35    1363.9      15.5                          
+    0:00:36  112684.6      0.40    1487.5      15.5                          
+    0:00:36  112686.0      0.33    1316.7      15.5                          
+    0:00:36  112695.8      0.35    1363.3      15.5                          
+    0:00:36  112695.8      0.32    1280.2      15.5                          
+    0:00:37  112697.2      0.31    1251.0      15.5                          
+    0:00:37  112699.6      0.31    1250.4      15.5                          
+    0:00:37  112704.7      0.31    1238.8      15.5                          
+    0:00:37  112709.9      0.31    1218.7      15.5                          
+    0:00:37  112706.1      0.30    1181.0      15.5                          
+    0:00:37  112713.2      0.30    1174.2      15.5                          
+    0:00:37  112726.8      0.29    1164.7      15.5                          
+    0:00:38  112738.5      0.29    1147.6      15.5                          
+    0:00:38  112738.5      0.29    1147.6      15.5                          
+    0:00:38  112738.5      0.29    1147.6      15.5                          
+    0:00:43  113098.5      0.49    1332.8      14.6                          
+    0:00:49  113406.8      0.50    1479.2      13.9                          
+    0:00:52  113514.8      0.54    1571.4      13.5                          
+    0:00:52  113580.5      0.56    1612.7      13.3                          
+    0:00:53  113598.3      0.56    1565.2      13.1                          
+    0:00:53  113602.5      0.56    1628.9      12.9                          
+    0:00:54  113604.9      0.55    1627.1      12.7                          
+    0:00:54  113607.7      0.55    1625.5      12.5                          
+    0:00:54  113597.8      0.55    1623.7      12.5                          
+    0:00:54  113597.8      0.55    1623.7      12.5                          
+    0:00:54  113727.3      0.42    1603.6      12.5 c1/mem_w3/mem_reg<23><0>/D
+    0:00:54  113858.7      0.41    1578.6      12.5 c1/mem_w2/mem_reg<4><6>/D
+    0:00:55  113991.6      0.40    1556.8      12.5 c1/mem_w3/mem_reg<31><0>/D
+    0:00:55  114149.2      0.39    1547.6      12.5 c1/mem_w0/mem_reg<0><0>/D
+    0:00:55  114287.7      0.39    1533.6      12.5 c1/mem_w0/mem_reg<10><0>/D
+    0:00:55  114401.3      0.34    1398.4      12.6 c0/mem_w0/mem_reg<1><0>/D
+    0:00:55  114558.9      0.34    1375.9      12.6 c0/mem_w2/mem_reg<15><0>/D
+    0:00:55  114702.5      0.34    1350.9      12.6 c0/mem_w2/mem_reg<30><0>/D
+    0:00:56  114854.6      0.33    1335.8      12.6 c1/mem_w1/mem_reg<8><0>/D
+    0:00:56  114903.4      0.33    1314.8      12.6 c1/mem_w3/mem_reg<31><0>/D
+    0:00:57  115098.6      0.29    1102.8      12.8 c1/mem_w3/mem_reg<31><0>/D
+    0:00:57  115109.9      0.28    1077.7      12.8 c0/mem_w3/mem_reg<8><0>/D
+    0:00:57  115127.3      0.27    1032.3      12.8 c1/mem_w3/mem_reg<7><0>/D
+    0:00:58  115109.0      0.27    1022.2      12.8 c0/mem_w1/mem_reg<3><0>/D
+    0:00:58  115124.0      0.25     981.7      12.8 c0/mem_w1/mem_reg<11><0>/D
+    0:00:58  115144.2      0.24     899.5      12.8 c0/mem_w1/mem_reg<11><0>/D
+    0:00:59  115141.3      0.22     875.3      12.8 c0/mem_w1/mem_reg<31><0>/D
+    0:00:59  115147.9      0.21     836.9      12.8 c0/mem_dr/mem_reg<19><0>/D
+    0:00:59  115149.8      0.21     836.7      12.8 DataOut<14>              
+    0:00:59  115150.3      0.21     836.7      12.8                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:59  115150.3      0.21     836.7      12.8                          
+    0:00:59  115164.8      0.21     833.0      12.8 c0/mem_w1/mem_reg<19><0>/D
+    0:00:59  115173.7      0.20     814.3      12.8 DataOut<12>              
+    0:00:59  115173.7      0.20     812.1      12.9 c1/mem_w2/mem_reg<30><6>/D
+    0:01:00  115193.9      0.20     761.3      12.8 DataOut<12>              
+    0:01:00  115202.8      0.19     704.5      12.8 DataOut<12>              
+    0:01:00  115220.2      0.18     714.6      12.8 DataOut<12>              
+    0:01:00  115220.7      0.18     706.5      12.8 DataOut<12>              
+    0:01:01  115224.9      0.18     703.5      12.8 DataOut<12>              
+    0:01:01  115219.2      0.18     695.4      12.8 c1/mem_w0/mem_reg<23><0>/D
+    0:01:01  115224.4      0.17     669.5      12.8 DataOut<13>              
+    0:01:01  115235.2      0.17     645.8      12.8 DataOut<1>               
+    0:01:01  115244.6      0.16     640.0      12.8 DataOut<8>               
+    0:01:02  115202.4      0.16     631.6      12.8 DataOut<15>              
+    0:01:02  115218.8      0.16     622.7      12.8 DataOut<15>              
+    0:01:02  115227.2      0.16     630.9      12.8 c0/mem_w3/mem_reg<31><0>/D
+    0:01:02  115232.9      0.16     627.7      12.8 DataOut<11>              
+    0:01:02  115236.1      0.16     627.1      12.8 c0/mem_w2/mem_reg<0><0>/D
+    0:01:02  115253.0      0.16     621.7      12.8 c0/mem_w2/mem_reg<8><0>/D
+    0:01:02  115274.2      0.16     617.1      12.8 DataOut<1>               
+    0:01:02  115287.3      0.16     613.0      12.8 c0/mem_w0/mem_reg<12><0>/D
+    0:01:02  115313.6      0.16     611.8      12.8 c0/mem_w0/mem_reg<17><0>/D
+    0:01:02  115352.1      0.16     601.1      12.8 c0/mem_w1/mem_reg<17><0>/D
+    0:01:02  115379.7      0.16     596.4      12.8 DataOut<15>              
+    0:01:03  115408.4      0.16     586.3      12.8 DataOut<15>              
+    0:01:03  115421.5      0.15     574.4      12.8 c1/mem_w0/mem_reg<23><0>/D
+    0:01:03  115432.3      0.15     553.4      12.8 c0/mem_w3/mem_reg<31><0>/D
+    0:01:03  115441.2      0.15     539.1      12.8 c0/mem_w1/mem_reg<9><0>/D
+    0:01:03  115454.4      0.15     524.5      12.8 DataOut<10>              
+    0:01:03  115462.8      0.15     524.4      12.8 DataOut<15>              
+    0:01:03  115461.4      0.15     516.0      12.8 DataOut<15>              
+    0:01:03  115493.8      0.14     513.3      12.8 DataOut<15>              
+    0:01:04  115489.6      0.14     512.6      12.8 DataOut<6>               
+    0:01:04  115505.1      0.14     511.6      12.8 c0/mem_w2/mem_reg<25><0>/D
+    0:01:04  115511.6      0.14     500.2      12.8 DataOut<15>              
+    0:01:04  115548.2      0.14     490.3      12.8 c0/mem_w2/mem_reg<30><0>/D
+    0:01:04  115551.5      0.14     488.0      12.8 c1/mem_w2/mem_reg<14><6>/D
+    0:01:04  115560.4      0.14     486.2      12.8 DataOut<4>               
+    0:01:04  115569.8      0.14     480.7      12.8 c1/mem_w2/mem_reg<14><6>/D
+    0:01:04  115582.5      0.13     480.3      12.8 c1/mem_w2/mem_reg<9><0>/D
+    0:01:05  115584.8      0.13     482.0      12.8 DataOut<3>               
+    0:01:05  115591.4      0.13     475.1      12.9 DataOut<5>               
+    0:01:05  115602.2      0.13     467.6      12.8 mem/m0/reg0[12]/state_reg/D
+    0:01:05  115600.8      0.13     461.8      12.8 DataOut<0>               
+    0:01:05  115619.6      0.13     453.2      12.8 c0/mem_w1/mem_reg<13><0>/D
+    0:01:05  115622.8      0.13     449.1      12.8 c0/mem_w1/mem_reg<12><0>/D
+    0:01:05  115639.3      0.12     441.1      12.8 DataOut<0>               
+    0:01:05  115648.7      0.12     436.4      12.9 DataOut<0>               
+    0:01:06  115654.3      0.12     433.2      12.9 DataOut<0>               
+    0:01:06  115684.3      0.12     415.1      12.9 DataOut<0>               
+    0:01:06  115691.4      0.12     404.5      12.9 DataOut<0>               
+    0:01:06  115697.0      0.11     405.3      12.9 DataOut<7>               
+    0:01:06  115703.1      0.11     405.3      12.8 DataOut<6>               
+    0:01:06  115704.5      0.11     404.0      12.8 DataOut<2>               
+    0:01:06  115706.9      0.11     403.5      12.8 DataOut<2>               
+    0:01:06  115706.9      0.11     403.5      12.8 DataOut<7>               
+    0:01:06  115715.8      0.11     396.1      12.8 DataOut<5>               
+    0:01:06  115717.2      0.11     390.5      12.8 DataOut<1>               
+    0:01:07  115717.2      0.11     382.3      12.8 DataOut<3>               
+    0:01:07  115728.4      0.11     373.8      12.8 DataOut<1>               
+    0:01:07  115732.2      0.11     366.4      12.8 c1/mem_w1/mem_reg<31><0>/D
+    0:01:07  115741.1      0.10     364.1      12.8 mem/m0/reg0[12]/state_reg/D
+    0:01:07  115739.7      0.10     360.5      12.8 DataOut<3>               
+    0:01:07  115739.7      0.10     360.5      12.8 DataOut<7>               
+    0:01:07  115739.7      0.10     360.3      12.8 DataOut<3>               
+    0:01:07  115744.9      0.10     354.5      12.8 DataOut<3>               
+    0:01:07  115751.9      0.10     353.6      12.8 DataOut<6>               
+    0:01:08  115752.4      0.10     349.6      12.8 mem/m0/reg0[12]/state_reg/D
+    0:01:08  115758.0      0.10     329.8      12.8 DataOut<6>               
+    0:01:08  115768.3      0.09     325.1      12.8 DataOut<3>               
+    0:01:08  115770.7      0.09     319.1      12.8 mem/m0/reg0[12]/state_reg/D
+    0:01:08  115762.7      0.09     318.5      12.8 DataOut<3>               
+    0:01:08  115762.2      0.09     310.6      12.8 DataOut<6>               
+    0:01:08  115762.7      0.09     297.9      12.8 c1/mem_w0/mem_reg<15><0>/D
+    0:01:09  115771.1      0.09     296.0      12.8 DataOut<3>               
+    0:01:09  115776.3      0.09     295.4      12.8 DataOut<3>               
+    0:01:09  115775.4      0.09     303.2      12.8 DataOut<3>               
+    0:01:09  115780.5      0.09     302.9      12.8 DataOut<3>               
+    0:01:09  115789.0      0.09     302.4      12.8 c0/mem_dr/mem_reg<30><0>/D
+    0:01:09  115791.8      0.09     298.7      12.8 DataOut<3>               
+    0:01:09  115799.3      0.09     281.4      12.8 DataOut<3>               
+    0:01:09  115811.0      0.08     276.9      12.8 c0/mem_w1/mem_reg<31><0>/D
+    0:01:10  115819.5      0.08     275.2      12.8 DataOut<3>               
+    0:01:10  115827.9      0.08     272.7      12.8 c0/mem_dr/mem_reg<30><0>/D
+    0:01:10  115840.6      0.08     272.0      12.8 c0/mem_w1/mem_reg<11><0>/D
+    0:01:10  115842.0      0.08     272.0      12.8 DataOut<3>               
+    0:01:10  115852.8      0.08     283.2      12.8 DataOut<7>               
+    0:01:10  115941.0      0.08     271.6      12.8 c1/mem_w3/mem_reg<22><0>/D
+    0:01:10  115953.2      0.08     265.2      12.8 DataOut<7>               
+    0:01:10  115988.4      0.08     263.7      12.8 DataOut<3>               
+    0:01:11  115991.2      0.07     262.2      12.8 DataOut<7>               
+    0:01:11  115993.6      0.07     250.8      12.8 mem/m0/reg0[12]/state_reg/D
+    0:01:11  115993.6      0.07     243.2      12.8 DataOut<3>               
+    0:01:11  115998.8      0.07     232.9      12.8 DataOut<3>               
+    0:01:11  116011.4      0.07     229.9      12.8 DataOut<3>               
+    0:01:12  116010.5      0.07     226.2      12.8 DataOut<3>               
+    0:01:12  116008.1      0.07     225.7      12.9 DataOut<3>               
+    0:01:12  116007.2      0.07     220.0      12.9 DataOut<13>              
+    0:01:12  116002.0      0.06     213.8      12.9 DataOut<3>               
+    0:01:12  116007.2      0.06     210.4      12.9 DataOut<7>               
+    0:01:12  116025.0      0.06     206.2      12.9 c0/mem_w2/mem_reg<15><0>/D
+    0:01:12  116043.3      0.06     204.6      12.9 DataOut<7>               
+    0:01:12  116049.4      0.06     204.2      12.9 DataOut<6>               
+    0:01:13  116053.7      0.06     201.8      12.9 DataOut<6>               
+    0:01:13  116056.9      0.06     200.3      12.9 c1/mem_w3/mem_reg<7><0>/D
+    0:01:13  116055.5      0.06     199.8      12.9 DataOut<6>               
+    0:01:13  116071.5      0.06     197.2      12.9 c0/mem_w1/mem_reg<2><0>/D
+    0:01:13  116106.2      0.06     193.1      12.8 DataOut<6>               
+    0:01:13  116116.1      0.06     192.9      12.8 c1/mem_w3/mem_reg<3><0>/D
+    0:01:13  116125.9      0.06     192.8      12.8 c1/mem_w3/mem_reg<20><0>/D
+    0:01:13  116137.2      0.06     189.8      12.8 DataOut<6>               
+    0:01:13  116146.1      0.06     188.8      12.9 c0/mem_w1/mem_reg<30><0>/D
+    0:01:13  116170.5      0.06     185.4      12.9 DataOut<3>               
+    0:01:14  116170.5      0.06     185.4      12.9 DataOut<13>              
+    0:01:14  116170.5      0.06     185.0      12.9 DataOut<13>              
+    0:01:14  116170.5      0.06     183.2      12.9 DataOut<2>               
+    0:01:14  116177.1      0.06     181.9      12.9 DataOut<2>               
+    0:01:14  116177.6      0.06     180.2      12.8 DataOut<1>               
+    0:01:14  116180.8      0.06     179.1      12.8 DataOut<1>               
+    0:01:14  116185.1      0.05     177.5      12.9 DataOut<3>               
+    0:01:15  116186.0      0.05     172.0      12.9 DataOut<12>              
+    0:01:15  116186.0      0.05     169.8      12.9 DataOut<12>              
+    0:01:15  116189.8      0.05     169.6      12.9 DataOut<1>               
+    0:01:15  116186.9      0.05     169.4      12.9 DataOut<1>               
+    0:01:15  116182.7      0.05     169.3      12.9 DataOut<1>               
+    0:01:15  116186.9      0.05     168.1      12.9 DataOut<1>               
+    0:01:15  116181.3      0.05     167.6      12.9 DataOut<1>               
+    0:01:15  116197.3      0.05     164.2      12.8 DataOut<1>               
+    0:01:15  116201.5      0.05     163.9      12.8 DataOut<1>               
+    0:01:16  116199.1      0.05     162.7      12.8 DataOut<3>               
+    0:01:16  116203.4      0.05     161.2      12.8 c1/mem_w3/mem_reg<7><0>/D
+    0:01:16  116208.1      0.05     160.2      12.8 DataOut<1>               
+    0:01:16  116205.7      0.05     160.2      12.8 DataOut<1>               
+    0:01:17  116166.3      0.05     152.5      12.8 c0/mem_w2/mem_reg<6><0>/D
+    0:01:17  116166.3      0.05     152.5      12.8                          
+    0:01:17  116166.3      0.05     152.5      12.8                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:17  116166.3      0.05     152.5      12.8                          
+    0:01:17  116263.0      0.05     152.5      12.5 c0/mem_dr/net41346       
+    0:01:17  116299.1      0.05     152.5      12.4 c1/mem_tg/n69            
+    0:01:17  116303.8      0.05     151.8      12.4 c0/mem_vl/net69637       
+    0:01:17  116346.0      0.05     151.8      12.3 c0/mem_vl/n148           
+    0:01:17  116386.4      0.05     151.7      12.2 c0/mem_w1/net43539       
+    0:01:17  116423.9      0.05     152.0      12.2 c1/mem_vl/C854/net49618  
+    0:01:18  116469.5      0.05     152.5      12.1 c1/mem_vl/C854/net37586  
+    0:01:18  116500.9      0.05     152.2      12.0 c1/mem_tg/C451/net38110  
+    0:01:18  116506.1      0.05     151.7      12.0 logic/net37094           
+    0:01:18  116511.7      0.05     153.1      12.0 c0/mem_vl/n111           
+    0:01:18  116661.4      0.05     153.1      11.9 c0/mem_w0/net44029       
+    0:01:18  116661.4      0.05     152.9      11.9 c1/mem_w0/net40305       
+    0:01:18  116657.2      0.05     152.0      11.9 c0/mem_w2/net42321       
+    0:01:18  116705.1      0.05     151.7      11.9 c0/mem_vl/C854/net41333  
+    0:01:18  116710.7      0.05     151.7      11.9 c1/mem_vl/C854/net37607  
+    0:01:18  116755.7      0.05     151.7      11.9 mem/m0/n778              
+    0:01:18  116887.6      0.05     151.7      11.8 mem/n11                  
+    0:01:18  116890.4      0.05     151.7      11.8 c1/mem_vl/C854/net37926  
+    0:01:18  116928.9      0.05     151.7      11.8 c0/mem_tg/C451/net41438  
+    0:01:19  116933.6      0.05     151.7      11.8 mem/m3/err               
+    0:01:19  116938.3      0.05     151.7      11.8 mem/n20                  
+    0:01:19  117071.1      0.05     151.7      11.7 mem/m2/n761              
+    0:01:19  117124.6      0.05     151.7      11.7 logic/U4/net37079        
+    0:01:19  117238.2      0.05     151.7      11.6 mem/m2/n739              
+    0:01:19  117332.0      0.05     151.7      11.6 c0/mem_w0/C1166/net23223 
+    0:01:19  117474.2      0.05     151.7      11.5 c0/mem_w1/C1166/net23203 
+    0:01:19  117632.9      0.05     151.7      11.4 c0/mem_w2/C1166/net23287 
+    0:01:19  117778.8      0.05     151.7      11.4 c0/mem_w3/C1166/net23287 
+    0:01:19  117944.0      0.05     151.7      11.3 c1/mem_w1/C1166/net23433 
+    0:01:19  118107.3      0.05     151.7      11.2 c1/mem_w2/C1166/net23581 
+    0:01:19  118408.1      0.05     151.7      11.1 mem/m2/n623              
+    0:01:19  118643.3      0.05     151.7      11.1 c1/mem_vl/C854/net37715  
+    0:01:19  118675.6      0.05     150.4      11.0 logic/net37118           
+    0:01:20  118682.7      0.05     150.4      11.0 c0/mem_w0/C1166/net23105 
+    0:01:20  118768.6      0.05     150.4      11.0 c0/mem_w0/C1166/net23747 
+    0:01:20  118917.8      0.05     150.4      10.9 c0/mem_w2/C1166/net23221 
+    0:01:20  119011.2      0.05     150.4      10.9 c0/mem_w3/C1166/net23221 
+    0:01:20  119163.2      0.05     150.4      10.8 c1/mem_w1/C1166/net23201 
+    0:01:20  119328.0      0.05     150.4      10.7 c1/mem_w2/C1166/net23305 
+    0:01:20  119505.8      0.05     150.4      10.6 c1/dirty                 
+    0:01:20  119673.8      0.05     150.4      10.5 mem/m3/n783              
+    0:01:20  119732.5      0.05     150.4      10.5 mem/m0/n622              
+    0:01:20  120125.3      0.05     150.4      10.4 mem/m3/n661              
+    0:01:20  120236.5      0.05     150.4      10.4 logic/net37124           
+    0:01:20  120324.3      0.05     150.4      10.4 mem/m0/n759              
+    0:01:20  120381.1      0.05     150.4      10.4 mem/m2/n593              
+    0:01:20  120437.9      0.05     150.4      10.3 mem/m3/n729              
+    0:01:20  120515.3      0.05     150.4      10.3 c1/mem_w1/C1166/net23536 
+    0:01:21  120545.8      0.05     150.4      10.3 c1/mem_vl/net65925       
+    0:01:21  120597.9      0.05     150.2      10.3 logic/U4/net37072        
+    0:01:21  120639.7      0.05     150.2      10.3 logic/net37095           
+    0:01:21  120694.1      0.05     150.2      10.3 logic/net37126           
+    0:01:21  120702.6      0.05     150.2      10.3 c1/mem_vl/C854/net37685  
+    0:01:21  120708.2      0.05     150.2      10.3 c1/mem_vl/C854/net37417  
+    0:01:21  120715.7      0.05     150.2      10.3 c0/net44222              
+    0:01:21  120749.9      0.05     150.2      10.2 c1/mem_vl/C854/net37760  
+    0:01:21  120752.8      0.05     150.2      10.2 c0/mem_tg/net68729       
+    0:01:21  120762.2      0.05     150.2      10.2 c1/mem_vl/C854/net37733  
+    0:01:21  120783.7      0.05     150.2      10.2 c0/mem_w0/C1166/net23103 
+    0:01:21  120834.4      0.05     150.2      10.2 c0/mem_w1/C1166/net23745 
+    0:01:21  120893.1      0.05     150.2      10.2 c0/mem_w3/C1166/net23703 
+    0:01:21  120943.3      0.05     150.2      10.2 c0/net44184              
+    0:01:21  120946.1      0.05     150.1      10.2 c1/mem_vl/C854/net37854  
+    0:01:21  120966.3      0.05     150.2      10.2 c0/mem_vl/C854/net40979  
+    0:01:21  121000.1      0.05     150.2      10.2 c0/mem_w1/C1166/net23536 
+    0:01:21  121055.5      0.05     150.2      10.2 c1/mem_w1/C1166/net23104 
+    0:01:21  121116.9      0.05     150.2      10.2 logic/net37111           
+    0:01:22  121132.0      0.05     150.2      10.1 logic/U4/net37074        
+    0:01:22  121130.6      0.05     150.1      10.1 c1/net67547              
+    0:01:22  121128.7      0.05     150.1      10.1 logic/U4/net37074        
+    0:01:22  121128.7      0.05     149.9      10.1 c0/mem_w2/net42321       
+    0:01:22  121124.9      0.05     150.0      10.1 logic/U4/net37074        
+    0:01:22  121126.3      0.05     150.0      10.1 logic/U4/net37074        
+    0:01:22  121130.1      0.05     150.0      10.1 c0/mem_vl/C854/net41171  
+    0:01:23  121134.8      0.05     150.0      10.1 mem/err                  
+    0:01:23  121134.3      0.05     149.4      10.1 c1/mem_tg/C451/net38166  
+    0:01:23  121134.3      0.05     149.4      10.1 c1/mem_vl/C854/net37938  
+    0:01:23  121137.1      0.05     149.5      10.1 c1/mem_w3/data_out<1>    
+    0:01:24  121136.7      0.05     149.3      10.1 c1/mem_w1/net65844       
+    0:01:24  121135.2      0.05     148.8      10.1 c1/mem_vl/C854/net37786  
+    0:01:24  121135.2      0.05     148.6      10.1 c1/mem_vl/C854/net37534  
+    0:01:24  121139.9      0.05     148.6      10.1 c0/mem_w0/C1166/net23283 
+    0:01:25  121139.9      0.05     148.6      10.1 logic/net37140           
+    0:01:25  121141.3      0.05     148.6      10.1 c1/mem_tg/net66413       
+    0:01:25  121139.0      0.05     146.8      10.1 c0/mem_w2/net42475       
+    0:01:25  121139.0      0.05     146.8      10.1 c0/mem_vl/C854/net41154  
+    0:01:25  121140.9      0.05     146.8      10.1 c0/mem_vl/C854/net41175  
+    0:01:26  121140.9      0.05     146.8      10.1 logic/data_out_cache0<6> 
+    0:01:26  121138.1      0.05     146.8      10.1 c1/mem_tg/net66413       
+    0:01:26  121138.1      0.05     146.3      10.1 c1/mem_w1/net39673       
+    0:01:26  121133.8      0.05     146.1      10.1 c0/mem_vl/C854/net40989  
+    0:01:26  121127.7      0.05     146.1      10.1 c1/mem_vl/net68344       
+    0:01:27  121106.6      0.05     146.0      10.1 c1/mem_tg/C451/net38102  
+    0:01:27  121109.4      0.05     146.0      10.1 c0/mem_w3/C1166/net23493 
+    0:01:27  121112.2      0.05     146.0      10.1 c0/mem_w3/C1166/net23494 
+    0:01:27  121114.6      0.05     146.0      10.0 c1/mem_vl/C854/net37922  
+    0:01:28  121126.3      0.07     192.8      10.0 DataOut<12>              
+    0:01:28  121126.3      0.07     188.8      10.0 c1/mem_w3/mem_reg<7><3>/D
+    0:01:29  121130.6      0.07     189.0      10.0 c1/mem_w2/net67920       
+    0:01:29  121155.9      0.12     237.4      10.0 logic/net68483           
+    0:01:29  121186.4      0.15     363.0       9.9 c0/mem_tg/C451/net48306  
+    0:01:29  121220.2      0.26     689.9       9.9 logic/net37160           
+    0:01:29  121277.0      0.26     821.1       9.8 c0/mem_tg/net68541       
+    0:01:30  121303.7      0.31    1114.0       9.8 c0/mem_vl/C854/net41265  
+    0:01:30  121328.1      0.31    1114.0       9.7 c1/mem_tg/C451/net38313  
+    0:01:30  121334.2      0.31    1114.0       9.7 mem/err1                 
+    0:01:30  121364.3      0.31    1114.0       9.7 c0/mem_tg/C451/net41492  
+    0:01:30  121418.7      0.32    1139.8       9.6 c1/mem_tg/C451/net38185  
+    0:01:30  121496.6      0.32    1142.1       9.5 c1/mem_tg/C451/net38164  
+    0:01:30  121590.9      0.33    1142.7       9.4 c1/mem_vl/C854/net37904  
+    0:01:31  121596.6      0.33    1142.7       9.4 c1/mem_vl/C854/net37790  
+    0:01:31  121604.1      0.33    1142.7       9.4 c1/mem_tg/net69650       
+    0:01:31  121653.8      0.34    1235.7       9.4 c1/mem_vl/C854/net37670  
+    0:01:31  121725.6      0.37    1324.8       9.3 c1/mem_vl/C854/net37481  
+    0:01:31  121759.4      0.38    1316.4       9.3 c1/mem_vl/C854/net37717  
+    0:01:31  121783.8      0.41    1374.0       9.2 c1/mem_tg/net67610       
+    0:01:31  121821.8      0.41    1372.7       9.2 c0/mem_tg/C451/net41587  
+    0:01:31  121896.9      0.41    1372.5       9.2 c1/mem_w1/C1166/net23157 
+    0:01:32  121994.1      0.41    1374.4       9.2 c1/mem_vl/C854/net37562  
+    0:01:32  122091.7      0.41    1436.9       9.1 c0/mem_w3/C1166/net23704 
+    0:01:32  122187.4      0.42    1437.2       9.1 c1/mem_vl/C854/net37776  
+    0:01:32  122253.1      0.42    1437.2       9.1 c0/mem_tg/n87            
+    0:01:32  122323.5      0.42    1437.2       9.0 c0/mem_tg/n153           
+    0:01:32  122398.6      0.42    1437.2       8.9 c1/mem_tg/n14            
+    0:01:32  122515.9      0.42    1437.2       8.8 c1/mem_tg/n93            
+    0:01:32  122633.3      0.42    1437.2       8.7 c1/mem_tg/n159           
+    0:01:33  122723.8      0.41    1416.4       8.6 DataOut<6>               
+    0:01:33  122716.8      0.39    1364.7       8.6 DataOut<8>               
+    0:01:33  122721.5      0.38    1325.5       8.6 DataOut<6>               
+    0:01:34  122722.9      0.37    1291.2       8.6 DataOut<6>               
+    0:01:34  122730.4      0.36    1285.7       8.6 DataOut<6>               
+    0:01:34  122732.3      0.36    1273.7       8.6 DataOut<6>               
+    0:01:34  122734.6      0.36    1263.2       8.6 DataOut<6>               
+    0:01:34  122741.7      0.35    1257.2       8.6 DataOut<6>               
+    0:01:34  122740.7      0.35    1193.3       8.6 DataOut<6>               
+    0:01:35  122743.1      0.34    1175.8       8.6 DataOut<15>              
+    0:01:35  122744.9      0.34    1171.5       8.6 DataOut<15>              
+    0:01:35  122743.5      0.33    1179.4       8.6 DataOut<15>              
+    0:01:35  122744.5      0.33    1170.4       8.6 DataOut<6>               
+    0:01:35  122752.0      0.33    1152.4       8.6 DataOut<15>              
+    0:01:35  122748.2      0.32    1141.2       8.6 DataOut<9>               
+    0:01:36  122759.5      0.32    1141.0       8.6 c1/mem_dr/mem_reg<7><0>/D
+    0:01:36  122755.3      0.32    1113.1       8.6 c1/mem_dr/mem_reg<23><0>/D
+    0:01:36  122754.3      0.32    1109.8       8.6 DataOut<15>              
+    0:01:36  122759.0      0.32    1108.8       8.6 DataOut<15>              
+    0:01:36  122759.0      0.32    1104.7       8.6 DataOut<15>              
+    0:01:36  122760.4      0.32    1107.2       8.6 DataOut<12>              
+    0:01:36  122760.0      0.31    1104.8       8.6 DataOut<9>               
+    0:01:36  122752.9      0.31    1087.8       8.6 DataOut<15>              
+    0:01:36  122752.0      0.31    1076.6       8.6 DataOut<9>               
+    0:01:37  122744.5      0.31    1065.3       8.6 DataOut<15>              
+    0:01:37  122744.0      0.30    1063.7       8.6 DataOut<9>               
+    0:01:37  122743.1      0.30    1055.8       8.6 DataOut<0>               
+    0:01:37  122741.7      0.30    1055.8       8.6 DataOut<9>               
+    0:01:37  122740.3      0.30    1053.1       8.6 DataOut<15>              
+    0:01:37  122750.1      0.30    1045.7       8.6 DataOut<13>              
+    0:01:38  122758.6      0.30    1045.1       8.6 logic/n43                
+    0:01:38  122768.9      0.32    1089.2       8.6 c0/mem_vl/C854/net41323  
+    0:01:39  122775.0      0.32    1089.2       8.5 c1/mem_vl/C854/net37637  
+    0:01:39  122780.1      0.32    1089.2       8.5 c1/mem_vl/net69674       
+    0:01:39  122786.7      0.32    1089.2       8.5 c1/mem_tg/C451/net38103  
+    0:01:39  122792.8      0.32    1089.2       8.5 c1/mem_vl/C854/net37376  
+    0:01:39  122818.2      0.32    1089.2       8.5 c0/mem_tg/n118           
+    0:01:40  122824.3      0.32    1089.3       8.5 logic/net37140           
+    0:01:40  122823.8      0.32    1090.5       8.5 DataOut<10>              
+    0:01:40  122819.6      0.31    1072.2       8.5 DataOut<10>              
+    0:01:40  122823.8      0.30    1057.2       8.5 DataOut<13>              
+    0:01:40  122826.1      0.30    1059.9       8.5 DataOut<15>              
+    0:01:40  122825.2      0.30    1050.1       8.5 DataOut<10>              
+    0:01:40  122836.5      0.30    1047.0       8.5 DataOut<10>              
+    0:01:40  122830.4      0.30    1045.7       8.5 DataOut<10>              
+    0:01:41  122830.8      0.30    1045.3       8.5 DataOut<15>              
+    0:01:41  122832.2      0.30    1044.1       8.5 DataOut<15>              
+    0:01:41  122828.9      0.29    1042.2       8.5 DataOut<15>              
+    0:01:41  122826.6      0.29    1032.5       8.5 DataOut<10>              
+    0:01:41  122829.4      0.29    1032.3       8.5 DataOut<10>              
+    0:01:42  122834.1      0.29    1024.1       8.5 DataOut<10>              
+    0:01:42  122842.6      0.29    1021.1       8.5 DataOut<15>              
+    0:01:42  122848.7      0.29    1012.4       8.5 DataOut<5>               
+    0:01:42  122880.6      0.29    1012.3       8.5 DataOut<10>              
+    0:01:43  122887.6      0.28    1016.2       8.5 DataOut<10>              
+    0:01:43  122892.8      0.28    1013.0       8.5 DataOut<10>              
+    0:01:43  122905.4      0.28    1009.0       8.5 DataOut<15>              
+    0:01:43  122913.0      0.28    1007.3       8.5 DataOut<10>              
+    0:01:43  122916.7      0.28     992.4       8.4 DataOut<10>              
+    0:01:43  122923.3      0.28     986.8       8.4 DataOut<15>              
+    0:01:43  122920.0      0.27     987.5       8.4 DataOut<10>              
+    0:01:43  122921.4      0.27     980.0       8.4 DataOut<15>              
+    0:01:44  122922.3      0.27     977.7       8.4 DataOut<10>              
+    0:01:44  122920.5      0.27     976.3       8.4 DataOut<10>              
+    0:01:44  122921.9      0.27     977.6       8.4 DataOut<12>              
+    0:01:44  122923.7      0.27     975.0       8.4 DataOut<10>              
+    0:01:45  122922.3      0.27     971.2       8.4 DataOut<10>              
+    0:01:45  122922.3      0.27     968.0       8.4 DataOut<10>              
+    0:01:45  122925.2      0.27     964.3       8.4 DataOut<10>              
+    0:01:45  122923.3      0.27     962.8       8.4 DataOut<15>              
+    0:01:45  122925.6      0.27     962.7       8.4 DataOut<10>              
+    0:01:46  122927.0      0.27     962.7       8.4 DataOut<10>              
+    0:01:46  122930.8      0.27     962.1       8.4 DataOut<12>              
+    0:01:46  122932.7      0.26     958.5       8.4 DataOut<12>              
+    0:01:46  122933.1      0.26     956.5       8.4 DataOut<15>              
+    0:01:47  122945.3      0.26     953.2       8.4 DataOut<15>              
+    0:01:47  122952.4      0.26     951.8       8.4 DataOut<10>              
+    0:01:47  122950.0      0.26     951.4       8.4 DataOut<10>              
+    0:01:47  122955.7      0.26     950.4       8.4 DataOut<10>              
+    0:01:47  122956.6      0.26     949.6       8.4 DataOut<15>              
+    0:01:47  122961.3      0.26     954.4       8.4 DataOut<14>              
+    0:01:47  122962.7      0.26     953.7       8.4 DataOut<10>              
+    0:01:47  122959.9      0.26     952.5       8.4 DataOut<10>              
+    0:01:47  122959.9      0.26     950.9       8.4 DataOut<13>              
+    0:01:48  122964.6      0.26     947.5       8.4 DataOut<15>              
+    0:01:48  122964.6      0.26     946.8       8.4 DataOut<10>              
+    0:01:48  122964.1      0.26     946.7       8.4                          
+    0:01:48  122962.2      0.26     946.7       8.4                          
+    0:01:48  122962.2      0.26     946.6       8.4                          
+    0:01:48  122963.6      0.26     946.3       8.4                          
+    0:01:48  122966.9      0.26     938.2       8.4                          
+    0:01:49  122968.8      0.26     938.1       8.4                          
+    0:01:49  122982.9      0.26     937.5       8.4                          
+    0:01:49  122986.6      0.26     936.7       8.4                          
+    0:01:49  122989.4      0.26     936.6       8.4                          
+    0:01:49  122988.5      0.26     936.6       8.4                          
+    0:01:49  122988.5      0.26     935.5       8.4                          
+    0:01:50  122992.7      0.26     931.1       8.4                          
+    0:01:50  122994.1      0.26     919.6       8.4                          
+    0:01:50  122998.8      0.26     918.7       8.4                          
+    0:01:50  122997.0      0.26     915.2       8.4                          
+    0:01:50  123005.4      0.26     915.2       8.4                          
+    0:01:50  123011.5      0.26     914.6       8.4                          
+    0:01:50  123012.0      0.26     914.5       8.4                          
+    0:01:50  123013.4      0.26     914.5       8.4                          
+    0:01:50  123017.1      0.26     914.4       8.4                          
+    0:01:50  123023.7      0.26     913.7       8.4                          
+    0:01:50  123033.1      0.26     911.0       8.4                          
+    0:01:51  123035.0      0.26     910.4       8.4                          
+    0:01:51  123037.3      0.26     910.2       8.4                          
+    0:01:51  123039.7      0.26     909.9       8.4                          
+    0:01:51  123042.0      0.26     909.7       8.4                          
+    0:01:51  123044.4      0.26     909.4       8.4                          
+    0:01:51  123046.7      0.26     909.1       8.4                          
+    0:01:51  123049.0      0.26     908.9       8.4                          
+    0:01:51  123054.2      0.26     908.6       8.4                          
+    0:01:51  123065.9      0.26     908.2       8.4                          
+    0:01:51  123069.7      0.26     908.1       8.4                          
+    0:01:51  123074.4      0.26     906.6       8.4                          
+    0:01:51  123074.9      0.26     906.2       8.4                          
+    0:01:51  123077.7      0.26     906.1       8.4                          
+    0:01:51  123080.5      0.26     904.4       8.4                          
+    0:01:51  123082.4      0.26     902.0       8.4                          
+    0:01:51  123087.5      0.26     901.0       8.4                          
+    0:01:51  123096.0      0.26     900.9       8.4                          
+    0:01:51  123103.5      0.26     899.2       8.4                          
+    0:01:51  123124.6      0.26     895.8       8.4                          
+    0:01:51  123172.5      0.26     889.6       8.4                          
+    0:01:51  123203.9      0.26     886.1       8.4                          
+    0:01:51  123263.1      0.26     878.3       8.4                          
+    0:01:51  123301.1      0.26     873.6       8.4                          
+    0:01:52  123308.1      0.26     873.3       8.4                          
+    0:01:52  123318.0      0.26     872.7       8.4                          
+    0:01:52  123315.6      0.26     866.5       8.4                          
+    0:01:52  123315.1      0.26     861.8       8.4                          
+    0:01:52  123318.0      0.26     861.8       8.4                          
+    0:01:52  123319.8      0.26     860.9       8.4                          
+    0:01:52  123323.6      0.26     860.7       8.4                          
+    0:01:52  123326.4      0.26     860.6       8.4                          
+    0:01:52  123329.2      0.26     853.0       8.4                          
+    0:01:52  123334.9      0.26     852.9       8.4                          
+    0:01:52  123343.3      0.26     852.8       8.4                          
+    0:01:52  123353.2      0.26     852.8       8.4                          
+    0:01:52  123356.9      0.26     851.0       8.4                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:52  123356.9      0.26     851.0       8.4                          
+    0:01:52  123356.9      0.26     851.0       8.4                          
+    0:01:54  121702.6      0.26     853.1       8.3                          
+    0:01:55  120518.6      0.26     849.6       8.2                          
+    0:01:55  119887.4      0.26     849.7       8.1                          
+    0:01:55  119722.2      0.26     849.0       8.1                          
+    0:01:56  119637.2      0.26     848.3       8.1                          
+    0:01:56  119565.4      0.26     847.6       8.1                          
+    0:01:56  119502.1      0.26     846.9       8.1                          
+    0:01:56  119450.0      0.26     846.9       8.1                          
+    0:01:56  119421.4      0.26     847.3       8.1                          
+    0:01:56  119393.2      0.26     847.7       8.1                          
+    0:01:57  119366.5      0.26     848.1       8.1                          
+    0:01:57  119342.5      0.26     848.4       8.1                          
+    0:01:57  119318.6      0.26     848.9       8.1                          
+    0:01:57  119294.7      0.26     849.3       8.1                          
+    0:01:57  119270.7      0.26     849.7       8.1                          
+    0:01:57  119246.8      0.26     850.1       8.1                          
+    0:01:57  119245.4      0.26     850.2       8.1                          
+    0:01:58  119245.4      0.26     850.2       8.1                          
+    0:01:58  119245.4      0.26     850.2       8.1                          
+    0:01:58  119107.4      0.26     850.1       8.1                          
+    0:01:58  119097.5      0.26     850.1       8.1                          
+    0:01:58  119097.5      0.26     850.1       8.1                          
+    0:01:58  119097.5      0.26     850.1       8.1                          
+    0:01:58  119097.5      0.26     850.1       8.1                          
+    0:01:58  119097.5      0.26     850.1       8.1                          
+    0:01:58  119097.5      0.26     850.1       8.1                          
+    0:01:59  119097.1      0.26     851.7       8.1 DataOut<10>              
+    0:01:59  119097.1      0.26     851.4       8.1 DataOut<15>              
+    0:01:59  119096.6      0.26     849.8       8.1                          
+    0:01:59  119091.4      0.26     849.8       8.1                          
+    0:01:59  119088.2      0.26     848.2       8.1                          
+    0:01:59  119079.7      0.26     847.9       8.1                          
+    0:01:59  119075.5      0.26     847.7       8.1                          
+    0:01:59  119063.8      0.26     847.7       8.1                          
+    0:02:00  119047.3      0.26     847.7       8.1                          
+    0:02:00  119036.5      0.26     847.7       8.1                          
+    0:02:00  119011.2      0.26     846.0       8.1                          
+    0:02:00  119008.4      0.26     845.9       8.1                          
+    0:02:00  119002.3      0.26     846.1       8.1                          
+    0:02:00  118991.0      0.26     826.6       8.1                          
+    0:02:00  118986.8      0.26     826.4       8.1                          
+    0:02:00  118981.6      0.26     826.4       8.1                          
+    0:02:01  118971.8      0.26     826.4       8.1                          
+    0:02:01  118963.3      0.26     826.4       8.1                          
+    0:02:01  118930.0      0.26     826.4       8.1                          
+    0:02:01  118916.4      0.26     826.4       8.1                          
+    0:02:01  118912.2      0.26     826.4       8.1                          
+    0:02:01  118900.4      0.26     826.4       8.1                          
+    0:02:01  118892.5      0.26     826.4       8.1                          
+    0:02:01  118870.4      0.26     826.4       8.1                          
+    0:02:01  118867.1      0.26     826.4       8.1                          
+    0:02:01  118845.5      0.26     826.4       8.1                          
+    0:02:01  118842.7      0.26     826.4       8.1                          
+    0:02:02  118822.5      0.26     826.4       8.1                          
+    0:02:02  118808.0      0.26     826.4       8.1                          
+    0:02:02  118796.7      0.26     826.4       8.1                          
+    0:02:02  118786.9      0.26     826.4       8.1                          
+    0:02:02  118779.4      0.26     826.4       8.1                          
+    0:02:02  118761.1      0.26     826.4       8.1                          
+    0:02:02  118756.4      0.26     826.4       8.1                          
+    0:02:03  118741.8      0.26     826.4       8.1                          
+    0:02:03  118746.0      0.26     821.3       8.1                          
+    0:02:03  118746.0      0.26     821.3       8.1                          
+    0:02:03  118754.0      0.26     822.8       8.1                          
+    0:02:03  118762.0      0.26     819.6       8.1                          
+    0:02:03  118776.1      0.26     815.2       8.1                          
+    0:02:03  118800.0      0.26     821.6       8.1                          
+    0:02:03  118809.4      0.26     818.3       8.1                          
+    0:02:04  118806.6      0.26     803.3       8.1                          
+    0:02:04  118811.3      0.26     803.2       8.1                          
+    0:02:04  118814.1      0.26     803.2       8.1                          
+    0:02:04  118816.9      0.26     803.2       8.1                          
+    0:02:04  118833.8      0.26     803.1       8.1                          
+    0:02:04  118840.8      0.26     802.9       8.1                          
+    0:02:04  118847.9      0.26     800.7       8.1                          
+    0:02:04  118853.5      0.26     800.6       8.1                          
+    0:02:04  118853.5      0.26     800.4       8.1                          
+    0:02:04  118853.5      0.26     798.3       8.1                          
+    0:02:04  118857.7      0.26     798.2       8.1                          
+    0:02:04  118864.8      0.26     793.2       8.1                          
+    0:02:04  118867.6      0.26     790.9       8.1                          
+    0:02:04  118868.5      0.26     790.9       8.1                          
+    0:02:04  118872.3      0.26     790.8       8.1                          
+    0:02:04  118873.7      0.26     790.8       8.1                          
+    0:02:05  118880.7      0.26     790.7       8.1                          
+    0:02:05  118892.5      0.26     790.5       8.1                          
+    0:02:05  118898.1      0.26     790.5       8.1                          
+    0:02:05  118899.5      0.26     790.5       8.1                          
+    0:02:05  118901.4      0.26     790.4       8.1                          
+    0:02:05  118907.0      0.26     790.3       8.1                          
+    0:02:05  118912.2      0.26     790.2       8.1                          
+    0:02:05  118915.0      0.26     790.2       8.1                          
+    0:02:05  118921.1      0.26     790.0       8.1                          
+    0:02:05  118927.2      0.26     789.9       8.1                          
+    0:02:05  118936.1      0.26     789.8       8.1                          
+    0:02:05  118945.0      0.26     788.9       8.1                          
+    0:02:05  118950.7      0.26     788.7       8.1                          
+    0:02:05  118950.2      0.26     788.7       8.1                          
+    0:02:05  118961.9      0.26     788.7       8.1                          
+    0:02:05  118968.5      0.26     788.5       8.1                          
+    0:02:05  118976.9      0.26     788.4       8.1                          
+    0:02:05  118978.3      0.26     788.4       8.1                          
+    0:02:05  118988.2      0.26     788.3       8.1                          
+    0:02:05  118996.2      0.26     788.2       8.1                          
+    0:02:05  119007.4      0.26     788.1       8.1                          
+    0:02:05  119017.3      0.26     788.0       8.1                          
+    0:02:05  119024.3      0.26     787.9       8.1                          
+    0:02:06  119025.7      0.26     788.1       8.1 DataOut<15>              
+    0:02:06  119028.1      0.26     789.1       8.1 DataOut<10>              
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'mem_system' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'mem/m2/ff0/clk': 6271 load(s), 1 driver(s)
+1
+check_design -summary
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12-SP3
+Date:        Tue Dec 15 00:52:50 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     97
+    Unconnected ports (LINT-28)                                    96
+    Constant outputs (LINT-52)                                      1
+
+Cells                                                             104
+    Connected to power or ground (LINT-32)                         81
+    Nets connected to multiple pins on same cell (LINT-33)         23
+--------------------------------------------------------------------------------
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+mem_system.syn.v
+write -hierarchy -f verilog $my_toplevel -output synth/$filename
+Writing verilog file '/afs/cs.wisc.edu/u/p/r/prayag/private/cs552/project/cache/cache_assoc/verilog/synth/mem_system.syn.v'.
+Warning: Bus naming style currently specified as %s<%d>, verilog syntax requires bus naming style to be "[]".  (VO-13)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 1 nets to module mem_system using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+mem_system.ddc
+write -hierarchy -format ddc -output synth/$filename
+Writing ddc file 'synth/mem_system.ddc'.
+1
+report_hierarchy > synth/hierarchy.txt
+report_reference > synth/reference_report.txt
+report_area > synth/area_report.txt
+report_cell > synth/cell_report.txt
+report_timing -max_paths 20 > synth/timing_report.txt
+report_power > synth/power_report.txt
+quit
+
+Memory usage for this session 172 Mbytes.
+Memory usage for this session including child processes 172 Mbytes.
+CPU usage for this session 129 seconds ( 0.04 hours ).
+Elapsed time for this session 131 seconds ( 0.04 hours ).
+
+Thank you...

@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : mem_system
+Version: Q-2019.12-SP3
+Date   : Sat Dec 12 17:09:13 2020
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'mem_system' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    gscl45nm (File: /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db)
+
+Number of ports:                         1715
+Number of nets:                         22332
+Number of cells:                        20948
+Number of combinational cells:          16895
+Number of sequential cells:              3778
+Number of macros/black boxes:               0
+Number of buf/inv:                       6065
+Number of references:                      11
+
+Combinational area:              40048.184239
+Buf/Inv area:                     9688.698318
+Noncombinational area:           30127.182133
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 70175.366372
+Total area:                 undefined
+1

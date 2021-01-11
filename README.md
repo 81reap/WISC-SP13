@@ -15,6 +15,7 @@ Demo 2 uses a single cycle perfect memory to create a pipelined implementation o
 There is also `intruction_timeline.pdf` which is a behavioral breakdown of an example assembly program that would run on the pipelined design.
 
 ## cache
+Cache creates a direct-mapped cache and a two-way set associative cache. The cache was supposed to be incorporated with the overall microprocessor design in a demo 3, however this was cut due to the class being online only during COVID 19.
 
 ## WISC-SP13 ISA
 note: I was unable to implement the extra credit sciic instruction.
