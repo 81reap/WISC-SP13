@@ -1,0 +1,70 @@
+ 
+****************************************
+Report : cell
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Tue Nov 17 19:52:50 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U11                       INVX2           gscl45nm        1.877200  
+U12                       BUFX2           gscl45nm        2.346500  
+U13                       INVX2           gscl45nm        1.877200  
+U14                       BUFX2           gscl45nm        2.346500  
+U15                       INVX4           gscl45nm        3.285100  
+U16                       INVX4           gscl45nm        3.285100  
+U17                       INVX4           gscl45nm        3.285100  
+U18                       INVX4           gscl45nm        3.285100  
+U19                       INVX1           gscl45nm        1.407900  
+U20                       INVX1           gscl45nm        1.407900  
+U21                       INVX1           gscl45nm        1.407900  
+U22                       INVX1           gscl45nm        1.407900  
+U23                       INVX1           gscl45nm        1.407900  
+U24                       INVX1           gscl45nm        1.407900  
+U25                       INVX1           gscl45nm        1.407900  
+U26                       INVX1           gscl45nm        1.407900  
+U27                       INVX1           gscl45nm        1.407900  
+U28                       INVX1           gscl45nm        1.407900  
+U29                       INVX1           gscl45nm        1.407900  
+U30                       INVX1           gscl45nm        1.407900  
+U31                       INVX1           gscl45nm        1.407900  
+U32                       INVX1           gscl45nm        1.407900  
+U33                       INVX8           gscl45nm        3.285100  
+U34                       INVX8           gscl45nm        3.285100  
+U35                       INVX8           gscl45nm        3.285100  
+U36                       INVX8           gscl45nm        3.285100  
+U37                       NOR3X1          gscl45nm        2.815800  
+U38                       NAND3X1         gscl45nm        2.346500  
+U39                       NAND3X1         gscl45nm        2.346500  
+U40                       NAND3X1         gscl45nm        2.346500  
+decode0                   decode                          4295.502828
+                                                                    h, n
+execute0                  execute                         6007.039901
+                                                                    h
+exmem0                    EXMEM                           1439.812374
+                                                                    h, n
+fetch0                    fetch                           15248.964620
+                                                                    h, n
+hdu0                      hazard_detection_unit           193.351595
+                                                                    h
+idex0                     IDEX                            2933.124942
+                                                                    h, n
+ifid0                     IFID                            612.905788
+                                                                    h, n
+memory0                   memory                          13034.807276
+                                                                    h, n
+memwb0                    MEMWB                           1375.987573
+                                                                    h, n
+wb0                       write_back                      306.922197
+                                                                    h
+--------------------------------------------------------------------------------
+Total 40 cells                                            45512.713193
+1

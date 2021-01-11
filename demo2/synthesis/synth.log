@@ -1,0 +1,912 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version Q-2019.12-SP3 for linux64 - Apr 21, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+echo "********** CS552 Reading files begin ********************"
+********** CS552 Reading files begin ********************
+set my_verilog_files [list alu.v branch_logic.v cla16.v cla4.v control.v decode3_8.v decode.v dff.v execute.v EXMEM.v fetch.v hazard_detection_unit.v IDEX.v IFID.v jump_logic.v memory2c.syn.v memory.v MEMWB.v mux2_1_16b.v mux2_1.v mux4_1_16b.v mux4_1_3b.v mux4_1.v mux8_1_16b.v mux8_1.v proc.v reg16b.v reg1b.v reg2b.v reg3b.v reg5b.v rf.v shifter.v write_back.v  ]
+alu.v branch_logic.v cla16.v cla4.v control.v decode3_8.v decode.v dff.v execute.v EXMEM.v fetch.v hazard_detection_unit.v IDEX.v IFID.v jump_logic.v memory2c.syn.v memory.v MEMWB.v mux2_1_16b.v mux2_1.v mux4_1_16b.v mux4_1_3b.v mux4_1.v mux8_1_16b.v mux8_1.v proc.v reg16b.v reg1b.v reg2b.v reg3b.v reg5b.v rf.v shifter.v write_back.v
+set my_toplevel proc
+proc
+define_design_lib WORK -path ./WORK
+1
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Compiling source file ./alu.v
+Compiling source file ./branch_logic.v
+Compiling source file ./cla16.v
+Compiling source file ./cla4.v
+Compiling source file ./control.v
+Compiling source file ./decode3_8.v
+Compiling source file ./decode.v
+Compiling source file ./dff.v
+Warning:  ./dff.v:15: delays for continuous assignment are ignored. (VER-173)
+Compiling source file ./execute.v
+Compiling source file ./EXMEM.v
+Compiling source file ./fetch.v
+Compiling source file ./hazard_detection_unit.v
+Compiling source file ./IDEX.v
+Compiling source file ./IFID.v
+Compiling source file ./jump_logic.v
+Compiling source file ./memory2c.syn.v
+Compiling source file ./memory.v
+Warning:  ./memory2c.syn.v:61: The statements in initial blocks are ignored. (VER-281)
+Compiling source file ./MEMWB.v
+Compiling source file ./mux2_1_16b.v
+Compiling source file ./mux2_1.v
+Compiling source file ./mux4_1_16b.v
+Compiling source file ./mux4_1_3b.v
+Compiling source file ./mux4_1.v
+Compiling source file ./mux8_1_16b.v
+Compiling source file ./mux8_1.v
+Compiling source file ./proc.v
+Compiling source file ./reg16b.v
+Compiling source file ./reg1b.v
+Compiling source file ./reg2b.v
+Compiling source file ./reg3b.v
+Compiling source file ./reg5b.v
+Compiling source file ./rf.v
+Compiling source file ./shifter.v
+Compiling source file ./write_back.v
+Presto compilation completed successfully.
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+1
+elaborate $my_toplevel -architecture verilog
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/s/synopsys-2020_06_08/@sys/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (proc)
+Elaborated 1 design.
+Current design is now 'proc'.
+Information: Building the design 'fetch'. (HDL-193)
+Presto compilation completed successfully. (fetch)
+Information: Building the design 'IFID'. (HDL-193)
+Presto compilation completed successfully. (IFID)
+Information: Building the design 'decode'. (HDL-193)
+Presto compilation completed successfully. (decode)
+Information: Building the design 'hazard_detection_unit'. (HDL-193)
+Presto compilation completed successfully. (hazard_detection_unit)
+Information: Building the design 'IDEX'. (HDL-193)
+Presto compilation completed successfully. (IDEX)
+Information: Building the design 'execute'. (HDL-193)
+Presto compilation completed successfully. (execute)
+Information: Building the design 'EXMEM'. (HDL-193)
+Presto compilation completed successfully. (EXMEM)
+Information: Building the design 'memory'. (HDL-193)
+Presto compilation completed successfully. (memory)
+Information: Building the design 'MEMWB'. (HDL-193)
+Presto compilation completed successfully. (MEMWB)
+Information: Building the design 'write_back'. (HDL-193)
+Presto compilation completed successfully. (write_back)
+Information: Building the design 'reg16b'. (HDL-193)
+Presto compilation completed successfully. (reg16b)
+Information: Building the design 'memory2c'. (HDL-193)
+
+Inferred memory devices in process
+	in routine memory2c line 71 in file
+		'./memory2c.syn.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|   memory2c/60    |   64   |    8    |      6       |
+|   memory2c/60    |   64   |    8    |      6       |
+======================================================
+Presto compilation completed successfully. (memory2c)
+Information: Building the design 'cla16'. (HDL-193)
+Presto compilation completed successfully. (cla16)
+Information: Building the design 'control'. (HDL-193)
+Warning:  ./control.v:29: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 16 in file
+	'./control.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            29            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (control)
+Information: Building the design 'rf'. (HDL-193)
+Presto compilation completed successfully. (rf)
+Information: Building the design 'reg1b'. (HDL-193)
+Presto compilation completed successfully. (reg1b)
+Information: Building the design 'reg5b'. (HDL-193)
+Presto compilation completed successfully. (reg5b)
+Information: Building the design 'reg2b'. (HDL-193)
+Presto compilation completed successfully. (reg2b)
+Information: Building the design 'mux4_1_16b'. (HDL-193)
+Presto compilation completed successfully. (mux4_1_16b)
+Information: Building the design 'alu'. (HDL-193)
+Warning:  ./alu.v:39: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 36 in file
+	'./alu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (alu)
+Information: Building the design 'mux4_1_3b'. (HDL-193)
+Presto compilation completed successfully. (mux4_1_3b)
+Information: Building the design 'branch_logic'. (HDL-193)
+
+Statistics for case statements in always block at line 11 in file
+	'./branch_logic.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            12            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (branch_logic)
+Information: Building the design 'jump_logic'. (HDL-193)
+
+Statistics for case statements in always block at line 12 in file
+	'./jump_logic.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            13            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (jump_logic)
+Information: Building the design 'reg3b'. (HDL-193)
+Presto compilation completed successfully. (reg3b)
+Information: Building the design 'dff'. (HDL-193)
+
+Inferred memory devices in process
+	in routine dff line 17 in file
+		'./dff.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (dff)
+Information: Building the design 'mux2_1'. (HDL-193)
+Presto compilation completed successfully. (mux2_1)
+Information: Building the design 'cla4'. (HDL-193)
+Presto compilation completed successfully. (cla4)
+Information: Building the design 'decode3_8'. (HDL-193)
+Presto compilation completed successfully. (decode3_8)
+Information: Building the design 'mux8_1'. (HDL-193)
+Presto compilation completed successfully. (mux8_1)
+Information: Building the design 'mux4_1'. (HDL-193)
+Presto compilation completed successfully. (mux4_1)
+Information: Building the design 'shifter'. (HDL-193)
+
+Statistics for case statements in always block at line 14 in file
+	'./shifter.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            16            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 30 in file
+	'./shifter.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            32            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 46 in file
+	'./shifter.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            48            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 62 in file
+	'./shifter.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            64            |    auto/auto     |
+===============================================
+Presto compilation completed successfully. (shifter)
+1
+echo "********** CS552 Reading files end ********************"
+********** CS552 Reading files end ********************
+current_design proc
+Current design is 'proc'.
+{proc}
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+set my_clock_pin clk
+clk
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 1000
+1000
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 0.1
+0.1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 0.1
+0.1
+#/**************************************************/
+#/* No modifications needed below                  */
+#/**************************************************/
+set verilogout_show_unconnected_pins "true"
+true
+# analyze -f verilog $my_verilog_files
+# elaborate $my_toplevel -architecture verilog
+# current_design $my_toplevel
+report_hierarchy 
+ 
+****************************************
+Report : hierarchy
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Tue Nov 17 19:51:38 2020
+****************************************
+
+Information: This design contains unmapped logic. (RPT-7)
+
+proc
+    EXMEM
+        reg1b
+            dff
+                GTECH_BUF                        gtech
+                GTECH_NOT                        gtech
+            mux2_1
+                GTECH_AND2                       gtech
+                GTECH_NOT                        gtech
+        reg3b
+            dff
+                ...
+            mux2_1
+                ...
+        reg5b
+            dff
+                ...
+            mux2_1
+                ...
+        reg16b
+            dff
+                ...
+            mux2_1
+                ...
+    GTECH_OR2                                    gtech
+    IDEX
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        reg1b
+            ...
+        reg2b
+            dff
+                ...
+            mux2_1
+                ...
+        reg5b
+            ...
+        reg16b
+            ...
+    IFID
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        reg16b
+            ...
+    MEMWB
+        reg1b
+            ...
+        reg3b
+            ...
+        reg5b
+            ...
+        reg16b
+            ...
+    decode
+        control
+            GTECH_AND2                           gtech
+            GTECH_BUF                            gtech
+            GTECH_NOT                            gtech
+            GTECH_OR2                            gtech
+        rf
+            GTECH_AND2                           gtech
+            decode3_8
+                GTECH_AND2                       gtech
+                GTECH_NOT                        gtech
+            mux8_1
+                mux2_1
+                    ...
+                mux4_1
+                    mux2_1
+                        ...
+            reg16b
+                ...
+    execute
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+        alu
+            GTECH_AND2                           gtech
+            GTECH_BUF                            gtech
+            GTECH_NOT                            gtech
+            GTECH_OR2                            gtech
+            GTECH_XOR2                           gtech
+            cla16
+                GTECH_AND2                       gtech
+                GTECH_OR2                        gtech
+                cla4
+                    GTECH_AND2                   gtech
+                    GTECH_OR2                    gtech
+                    GTECH_XOR2                   gtech
+            mux4_1_16b
+                mux4_1
+                    ...
+            shifter
+                GTECH_AND2                       gtech
+                GTECH_BUF                        gtech
+                GTECH_NOT                        gtech
+                GTECH_OR2                        gtech
+        branch_logic
+            GTECH_AND2                           gtech
+            GTECH_BUF                            gtech
+            GTECH_NOT                            gtech
+            GTECH_OR2                            gtech
+        cla16
+            ...
+        jump_logic
+            GTECH_AND2                           gtech
+            GTECH_BUF                            gtech
+            GTECH_NOT                            gtech
+            GTECH_OR2                            gtech
+        mux4_1_3b
+            mux4_1
+                ...
+        mux4_1_16b
+            ...
+    fetch
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+        cla16
+            ...
+        memory2c
+            GTECH_AND2                           gtech
+            GTECH_BUF                            gtech
+            GTECH_NOT                            gtech
+            GTECH_OR2                            gtech
+        reg16b
+            ...
+    hazard_detection_unit
+        GTECH_AND2                               gtech
+        GTECH_BUF                                gtech
+        GTECH_NOT                                gtech
+        GTECH_OR2                                gtech
+    memory
+        GTECH_OR2                                gtech
+        memory2c
+            ...
+    write_back
+        mux4_1_16b
+            ...
+1
+link
+
+  Linking design 'proc'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  gscl45nm (library)          /u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db
+
+1
+uniquify
+Information: Uniquified 28 instances of design 'reg16b'. (OPT-1056)
+Information: Uniquified 2 instances of design 'memory2c'. (OPT-1056)
+Information: Uniquified 4 instances of design 'cla16'. (OPT-1056)
+Information: Uniquified 19 instances of design 'reg1b'. (OPT-1056)
+Information: Uniquified 3 instances of design 'reg5b'. (OPT-1056)
+Information: Uniquified 2 instances of design 'reg2b'. (OPT-1056)
+Information: Uniquified 3 instances of design 'mux4_1_16b'. (OPT-1056)
+Information: Uniquified 2 instances of design 'reg3b'. (OPT-1056)
+Information: Uniquified 492 instances of design 'dff'. (OPT-1056)
+Information: Uniquified 869 instances of design 'mux2_1'. (OPT-1056)
+Information: Uniquified 16 instances of design 'cla4'. (OPT-1056)
+Information: Uniquified 32 instances of design 'mux8_1'. (OPT-1056)
+Information: Uniquified 115 instances of design 'mux4_1'. (OPT-1056)
+Information: Uniquified 2 instances of design 'shifter'. (OPT-1056)
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+1
+set find_clock [ find port [list $my_clock_pin] ]
+{clk}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+} 
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+	set on the port. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+1
+compile 
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'proc'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 264 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mux2_1_374'
+  Processing 'mux4_1_114'
+  Processing 'mux4_1_16b_1'
+  Processing 'write_back'
+  Processing 'dff_154'
+  Processing 'reg1b_0'
+  Processing 'reg3b_0'
+  Processing 'reg5b_0'
+  Processing 'reg16b_8'
+  Processing 'MEMWB'
+  Processing 'memory2c_0'
+  Processing 'memory'
+  Processing 'EXMEM'
+  Processing 'cla4_4'
+  Processing 'cla16_1'
+  Processing 'jump_logic'
+  Processing 'branch_logic'
+  Processing 'mux4_1_3b'
+  Processing 'shifter_0'
+  Processing 'mux4_1_16b_0'
+  Processing 'alu'
+  Processing 'mux4_1_16b_2'
+  Processing 'execute'
+  Processing 'reg2b_0'
+  Processing 'IDEX'
+  Processing 'hazard_detection_unit'
+  Processing 'mux8_1_15'
+  Processing 'reg16b_0'
+  Processing 'decode3_8'
+  Processing 'rf'
+  Processing 'control'
+  Processing 'decode'
+  Processing 'reg16b_26'
+  Processing 'IFID'
+  Processing 'fetch'
+  Processing 'proc'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'memory2c_0_DW01_inc_0'
+  Processing 'memory2c_1_DW01_inc_0_DW01_inc_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:13   41952.1      2.00     103.5      26.6                          
+    0:00:13   41952.1      2.00     103.5      26.6                          
+    0:00:13   42771.1      1.29      59.3      26.4                          
+    0:00:13   43457.6      1.21      37.1      26.4                          
+    0:00:13   44237.6      1.08      32.8      26.4                          
+    0:00:15   46843.6      0.89      27.3      20.6                          
+    0:00:15   46846.0      0.89      27.3      20.6                          
+    0:00:15   46846.0      0.89      27.3      20.6                          
+    0:00:15   46846.0      0.89      27.3      20.6                          
+    0:00:15   46846.0      0.89      27.3      20.6                          
+    0:00:17   42560.3      0.98      22.3      19.0                          
+    0:00:17   42576.3      0.88      18.7      19.0                          
+    0:00:18   42578.2      0.85      20.5      19.0                          
+    0:00:18   42578.2      0.85      20.5      19.0                          
+    0:00:19   42581.0      0.86      20.7      19.0                          
+    0:00:19   42587.6      0.86      20.6      18.9                          
+    0:00:19   42587.6      0.86      20.6      18.9                          
+    0:00:19   42587.6      0.86      20.6      18.9                          
+    0:00:19   42587.6      0.86      20.6      18.9                          
+    0:00:23   42946.6      0.92      21.0      16.2                          
+    0:00:28   43216.4      0.92      21.0      13.6                          
+    0:00:33   43314.5      0.92      20.9      13.8                          
+    0:00:38   43366.1      0.92      21.0      14.0                          
+    0:00:39   43399.0      0.92      21.0      14.0                          
+    0:00:40   43434.7      0.92      21.0      13.9                          
+    0:00:40   43468.0      0.92      21.0      13.8                          
+    0:00:40   43498.9      0.92      21.0      13.8                          
+    0:00:40   43529.9      0.92      21.0      13.7                          
+    0:00:40   43529.9      0.92      21.0      13.7                          
+    0:00:40   43535.1      0.92      21.0      13.7 execute0/INC_PC/cla3/net36390
+    0:00:41   43535.6      0.92      21.0      13.7 execute0/INC_PC/cla3/sum<3>
+    0:00:41   43536.0      0.92      20.8      13.7 decode0/CONTROL/net37695 
+    0:00:41   43537.0      0.92      20.7      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:41   43533.7      0.88      20.3      13.7 exmem0/newPC/DFF[13]/state_reg/D
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:42   43533.7      0.88      20.3      13.7                          
+    0:00:42   43560.4      0.84      19.6      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43573.6      0.81      19.3      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43589.1      0.78      19.0      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43605.9      0.77      18.8      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43626.1      0.76      18.5      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43650.1      0.75      18.4      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43666.0      0.74      16.3      13.8 fetch0/PC_REG/DFF[15]/state_reg/D
+    0:00:42   43679.2      0.73      16.2      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43684.8      0.72      16.1      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43690.0      0.71      15.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43694.6      0.71      15.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:42   43714.8      0.70      15.5      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43723.7      0.69      15.3      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43736.4      0.68      14.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43754.2      0.64      14.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43757.5      0.63      14.5      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43786.2      0.62      14.2      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43785.7      0.62      14.1      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43795.1      0.61      14.0      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43818.1      0.60      14.0      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43818.5      0.59      13.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43825.1      0.58      13.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43830.3      0.58      13.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43837.3      0.58      13.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43836.8      0.57      13.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43845.8      0.56      13.3      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43842.0      0.56      12.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:43   43848.6      0.56      12.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43855.6      0.55      12.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43860.8      0.55      12.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43860.3      0.55      12.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43859.8      0.55      12.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43863.1      0.54      12.8      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43859.4      0.54      11.9      13.8 fetch0/PC_REG/DFF[15]/state_reg/D
+    0:00:44   43862.2      0.54      11.8      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43878.6      0.54      11.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43878.6      0.53      11.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43880.0      0.53      11.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43892.7      0.53      11.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43904.0      0.53      11.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43911.9      0.53      11.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43923.7      0.52      11.5      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:44   43930.7      0.52      11.5      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43932.1      0.52      11.5      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43941.0      0.52      11.5      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43948.5      0.52      11.5      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43954.6      0.52      11.4      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43958.9      0.52      11.4      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43958.9      0.52      11.4      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43970.1      0.51      11.4      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43974.3      0.51      11.4      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43972.5      0.51      11.3      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43979.5      0.51      11.3      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43979.5      0.50      11.1      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43980.9      0.50      11.1      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43997.8      0.50      11.0      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   44000.2      0.49      11.0      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43999.2      0.49      10.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43995.5      0.49      10.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:45   43996.9      0.49      10.9      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   43996.9      0.49      10.8      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44006.7      0.48      10.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44009.5      0.48      10.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44012.8      0.48      10.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44015.2      0.48      10.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44027.8      0.48      10.7      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44030.7      0.47       9.6      13.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44042.4      0.47       9.5      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44051.8      0.47       9.5      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44056.0      0.46       9.4      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44056.0      0.46       9.4      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44058.4      0.46       9.4      13.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:46   44056.0      0.46       9.4      13.7                          
+    0:00:47   44056.0      0.46       9.4      13.7                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:47   44056.0      0.46       9.4      13.7                          
+    0:00:47   44061.6      0.46       9.3      13.3 execute0/JUMP/enJR       
+    0:00:47   44059.8      0.46       9.3      13.3 fetch0/PC_INC/cla1/net37796
+    0:00:47   44083.2      0.46       9.0      13.3 fetch0/PC_INC/cla2/net37770
+    0:00:47   44093.6      0.46       9.0      13.2 execute0/INC_JR/cla3/net36269
+    0:00:47   44108.6      0.46       9.0      13.2 execute0/ALU/ADDER/cla0/net37330
+    0:00:47   44125.5      0.46       9.0      13.2 execute0/ALU/ADDER/cla2/net37231
+    0:00:47   44156.9      0.46       8.7      13.1 decode0/CONTROL/net37676 
+    0:00:47   44185.1      0.46       8.7      13.1 execute0/INC_PC/cla1/net49854
+    0:00:47   44226.8      0.46       8.7      13.1 execute0/INC_PC/cla2/Pout
+    0:00:47   44247.0      0.46       8.7      13.1 execute0/ALU/ADDER/cla3/net37205
+    0:00:47   44382.2      0.46       8.7      12.9 execute0/ALU/ADDER/cla2/net37230
+    0:00:47   44418.3      0.46       8.7      12.9 decode0/CONTROL/net37688 
+    0:00:47   44430.0      0.46       8.7      12.9 execute0/INC_PC/cla2/net36438
+    0:00:47   44463.4      0.46       8.7      12.9 execute0/ALU/U3/net36741 
+    0:00:48   44550.6      0.46       8.7      12.8 execute0/ALU/U3/net36788 
+    0:00:48   44719.6      0.46       8.7      12.7 execute0/INC_JR/cla2/n12 
+    0:00:48   44817.2      0.46       8.7      12.6 memory0/DATA_MEM/C2242/net16490
+    0:00:48   44982.4      0.46       8.7      12.5 fetch0/INSTR_MEM/C2243/net15903
+    0:00:48   45130.7      0.46       8.7      12.4 execute0/ALU/ADDER/cla0/net37364
+    0:00:48   45200.6      0.46       8.7      12.4 memory0/DATA_MEM/C2242/net17028
+    0:00:48   45348.5      0.46       8.7      12.3 fetch0/INSTR_MEM/C2242/net16556
+    0:00:48   45468.1      0.46       8.7      12.2 execute0/ALU/shifter0/net37118
+    0:00:48   45501.9      0.46       8.7      12.2 execute0/INC_PC/cla0/Gout
+    0:00:48   45506.6      0.46       8.7      12.2 execute0/ALU/ADDER/cla0/Gout
+    0:00:48   45516.9      0.46       8.7      12.2 decode0/CONTROL/net37682 
+    0:00:48   45517.4      0.46       8.7      12.2 execute0/INC_PC/cla3/net41420
+    0:00:51   45525.9      0.46       8.7      12.2 execute0/SEL_B/MUX4_1[0]/MUX2/net49487
+    0:00:51   45533.8      0.46       8.7      12.0 fetch0/INSTR_MEM/C2242/net16476
+    0:00:51   45545.6      0.46       8.7      11.4 memory0/DATA_MEM/C2242/net16476
+    0:00:51   45592.5      0.46       8.7      10.8 fetch0/PC_INC/cla3/n19   
+    0:00:51   45590.1      0.46       8.6      10.8 execute0/JUMP/enJMP      
+    0:00:51   45595.8      0.46       8.6      10.8 decode0/CONTROL/net37680 
+    0:00:51   45596.7      0.46       8.6      10.8 decode0/CONTROL/net37691 
+    0:00:52   45594.4      0.46       8.6      10.8 execute0/ALU/ADDER/cla1/net37267
+    0:00:52   45633.8      0.46       8.6      10.8 fetch0/INSTR_MEM/C2242/net16814
+    0:00:52   45702.8      0.46       8.6      10.8 execute0/INC_PC/cla3/net36404
+    0:00:52   45837.0      0.46       8.6      10.7 fetch0/INSTR_MEM/C2242/net16682
+    0:00:52   45971.2      0.46       8.6      10.7 fetch0/INSTR_MEM/C2243/net15579
+    0:00:52   46084.3      0.46       8.6      10.7 execute0/INC_PC/cla3/net36413
+    0:00:52   46147.2      0.46       8.6      10.7 fetch0/INSTR_MEM/C2243/net15219
+    0:00:52   46197.0      0.46       8.6      10.7 execute0/ALU/ADDER/net37371
+    0:00:53   46227.5      0.46       8.6      10.6 fetch0/INSTR_MEM/n93     
+    0:00:53   46366.8      0.46       8.6      10.6 fetch0/INSTR_MEM/n167    
+    0:00:53   46506.2      0.46       8.6      10.6 fetch0/INSTR_MEM/n236    
+    0:00:53   46645.6      0.46       8.6      10.6 fetch0/INSTR_MEM/n309    
+    0:00:53   46785.0      0.46       8.6      10.6 fetch0/INSTR_MEM/n375    
+    0:00:54   46924.4      0.46       8.6      10.6 fetch0/INSTR_MEM/n442    
+    0:00:54   47063.7      0.46       8.6      10.6 fetch0/INSTR_MEM/n512    
+    0:00:54   47203.1      0.46       8.6      10.5 fetch0/INSTR_MEM/n578    
+    0:00:54   47342.5      0.46       8.6      10.5 fetch0/INSTR_MEM/n647    
+    0:00:54   47481.9      0.46       8.6      10.5 fetch0/INSTR_MEM/n716    
+    0:00:54   47621.3      0.46       8.6      10.5 fetch0/INSTR_MEM/n784    
+    0:00:54   47760.7      0.46       8.6      10.5 fetch0/INSTR_MEM/n854    
+    0:00:54   47900.0      0.46       8.6      10.5 fetch0/INSTR_MEM/n922    
+    0:00:54   48039.4      0.46       8.6      10.4 fetch0/INSTR_MEM/n988    
+    0:00:54   48178.8      0.46       8.6      10.4 fetch0/INSTR_MEM/n1058   
+    0:00:54   48318.2      0.46       8.6      10.4 fetch0/INSTR_MEM/n1126   
+    0:00:54   48457.6      0.46       8.6      10.4 fetch0/INSTR_MEM/n1193   
+    0:00:54   48597.0      0.46       8.6      10.4 fetch0/INSTR_MEM/n1264   
+    0:00:54   48736.3      0.46       8.6      10.4 fetch0/INSTR_MEM/n1330   
+    0:00:54   48861.2      0.46       8.6      10.4 execute0/ALU/ADDER/cla1/net37282
+    0:00:55   48861.2      0.46       8.6      10.4 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:55   48862.6      0.45       8.6      10.4 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:55   48862.6      0.45       8.5      10.4 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:55   48862.6      0.45       8.5      10.4 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:56   48864.0      0.45       8.5      10.4 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:56   48864.9      0.45       8.5      10.4 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:56   48862.6      0.45       8.6      10.4 exmem0/newPC/DFF[13]/state_reg/D
+    0:00:56   48867.3      0.45       8.6      10.4 execute0/ALU/ADDER/cla0/net49697
+    0:00:56   48864.5      0.45       8.6      10.4 execute0/INC_PC/cla1/B<3>
+    0:00:56   48871.0      0.45       8.6      10.3 execute0/ALU/ADDER/cla0/net37330
+    0:00:56   48870.6      0.45       8.6      10.3 decode0/CONTROL/net37698 
+    0:00:56   48870.6      0.45       8.6      10.3 execute0/ALU/ADDER/cla2/net50280
+    0:00:56   48873.4      0.45       8.6      10.3 execute0/ALU/shifter1/net36928
+    0:00:56   48878.5      0.45       8.6      10.3 execute0/ALU/ADDER/cla0/net37356
+    0:00:58   48879.0      0.45       8.6      10.3 execute0/ALU/ADDER/cla0/net37336
+    0:00:59   48882.8      0.45       8.6      10.3 execute0/ALU/ADDER/cla3/net37203
+    0:00:59   48912.3      0.50      10.1      10.3 fetch0/PC_INC/cla3/net37752
+    0:00:59   48964.4      0.60      13.6      10.2 fetch0/INSTR_MEM/C2242/net17152
+    0:00:59   49020.3      0.65      14.5      10.2 execute0/ALU/ADDER/cla0/net49316
+    0:00:59   49064.8      0.66      15.2      10.1 execute0/ALU/ADDER/cla0/net37327
+    0:00:59   49102.4      0.70      17.4      10.1 decode0/CONTROL/net37691 
+    0:01:00   49186.9      0.76      18.7      10.0 execute0/INC_PC/cla0/B<1>
+    0:01:00   49206.1      0.83      20.7      10.0 execute0/ALU/ADDER/cla0/net49561
+    0:01:01   49262.0      0.86      21.7      10.0 execute0/SEL_B/MUX4_1[3]/MUX1/net49768
+    0:01:02   49273.7      0.86      21.8      10.0 execute0/ALU/U3/net36775 
+    0:01:02   49346.4      0.88      22.0       9.9 execute0/ALU/U3/net36783 
+    0:01:02   49449.2      0.91      22.2       9.9 execute0/ALU/shifter0/net37015
+    0:01:02   49557.1      0.91      22.4       9.8 execute0/ALU/shifter1/net36891
+    0:01:02   49641.6      0.91      22.7       9.8 execute0/ALU/U3/net36580 
+    0:01:02   49644.0      0.91      22.7       9.8 execute0/ALU/U3/net20638 
+    0:01:02   49640.2      0.90      22.4       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:02   49639.3      0.88      22.2       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:02   49639.3      0.88      22.2       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:02   49637.9      0.85      22.1       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:02   49641.1      0.83      21.5       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:02   49640.2      0.83      21.4       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:02   49638.8      0.82      21.3       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:02   49640.2      0.82      21.2       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49644.9      0.82      21.1       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49644.9      0.81      21.0       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49644.4      0.79      20.9       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49646.8      0.78      20.8       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49644.4      0.78      20.8       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49648.2      0.76      20.7       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49650.5      0.76      20.7       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49648.2      0.75      20.6       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49651.9      0.75      20.7       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49654.8      0.75      20.7       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49652.9      0.75      20.7       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49649.6      0.75      20.6       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49654.3      0.75      20.6       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49657.6      0.75      20.5       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49656.2      0.74      20.5       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49658.5      0.74      20.5       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:03   49662.3      0.74      20.5       9.8 execute0/INC_PC/cla1/net36485
+    0:01:04   49670.7      0.74      20.4       9.8 fetch0/PC_INC/cla0/n10   
+    0:01:06   49675.4      0.74      20.4       9.8 execute0/net37580        
+    0:01:06   49674.9      0.74      20.4       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49676.3      0.74      20.4       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49678.7      0.74      20.4       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49681.5      0.74      20.3       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49684.3      0.74      20.4       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49684.3      0.73      20.3       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49684.8      0.73      20.3       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49687.6      0.73      20.3       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:06   49691.4      0.73      20.4       9.8 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:07   49712.5      0.73      20.3       9.8                          
+    0:01:07   49738.3      0.73      20.1       9.8                          
+    0:01:07   49763.2      0.73      20.0       9.8                          
+    0:01:07   49785.7      0.73      20.0       9.8                          
+    0:01:07   49803.5      0.73      19.9       9.8                          
+    0:01:07   49797.9      0.73      19.8       9.8                          
+    0:01:07   49816.2      0.73      19.8       9.8                          
+    0:01:07   49814.8      0.73      19.7       9.8                          
+    0:01:07   49814.8      0.73      19.5       9.8                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:07   49814.8      0.73      19.5       9.8                          
+    0:01:07   49814.8      0.73      19.5       9.8                          
+    0:01:09   47372.5      0.73      18.3       9.7                          
+    0:01:09   46744.2      0.73      18.1       9.7                          
+    0:01:09   46305.4      0.73      19.0       9.7                          
+    0:01:10   46150.0      0.73      19.0       9.7                          
+    0:01:10   46061.8      0.73      18.9       9.7                          
+    0:01:10   45975.9      0.73      19.0       9.7                          
+    0:01:10   45897.1      0.73      19.0       9.7                          
+    0:01:10   45835.1      0.73      19.0       9.7                          
+    0:01:10   45791.5      0.73      19.2       9.7                          
+    0:01:10   45761.9      0.73      19.2       9.7                          
+    0:01:10   45761.9      0.73      19.2       9.7                          
+    0:01:10   45761.9      0.73      19.2       9.7                          
+    0:01:10   45572.8      0.74      19.3       9.7                          
+    0:01:10   45541.3      0.74      19.2       9.7                          
+    0:01:11   45537.6      0.74      19.2       9.7                          
+    0:01:11   45537.6      0.74      19.2       9.7                          
+    0:01:11   45537.6      0.74      19.2       9.7                          
+    0:01:11   45537.6      0.74      19.2       9.7                          
+    0:01:11   45537.6      0.74      19.2       9.7                          
+    0:01:11   45537.6      0.74      19.2       9.7                          
+    0:01:11   45538.1      0.73      19.1       9.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:11   45538.1      0.73      19.0       9.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:11   45536.6      0.73      19.0       9.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:11   45533.8      0.73      19.0       9.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:11   45533.8      0.73      19.0       9.7 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:11   45531.5      0.73      19.0       9.7                          
+    0:01:11   45524.4      0.73      19.0       9.7                          
+    0:01:11   45516.9      0.73      19.0       9.7                          
+    0:01:11   45511.8      0.73      19.0       9.7                          
+    0:01:11   45496.8      0.73      19.0       9.6                          
+    0:01:11   45479.9      0.73      19.0       9.6                          
+    0:01:11   45475.2      0.73      19.0       9.6                          
+    0:01:11   45475.6      0.73      18.9       9.6                          
+    0:01:11   45475.6      0.72      18.9       9.6                          
+    0:01:11   45478.5      0.72      18.9       9.6                          
+    0:01:12   45484.1      0.72      18.9       9.6 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:12   45483.6      0.72      18.9       9.6 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:12   45486.4      0.72      18.9       9.6 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:12   45491.6      0.72      18.8       9.6 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:12   45499.1      0.72      19.2       9.6 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:12   45502.4      0.71      19.1       9.6 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:12   45512.7      0.71      19.2       9.6 exmem0/newPC/DFF[13]/state_reg/D
+    0:01:12   45512.7      0.71      19.1       9.6 exmem0/newPC/DFF[13]/state_reg/D
+Loading db file '/u/k/a/karu/courses/cs552/cad/Synopsys_Libraries/libs/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'proc' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'fetch0/PC_REG/DFF[1]/clk': 1516 load(s), 1 driver(s)
+     Net 'fetch0/PC_INC/cla1/B<0>': 1066 load(s), 1 driver(s)
+1
+check_design -summary
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12-SP3
+Date:        Tue Nov 17 19:52:48 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     34
+    Unconnected ports (LINT-28)                                    14
+    Constant outputs (LINT-52)                                     20
+
+Cells                                                             110
+    Connected to power or ground (LINT-32)                         94
+    Nets connected to multiple pins on same cell (LINT-33)         16
+--------------------------------------------------------------------------------
+
+Information: Use the 'check_design' command for 
+	 more information about warnings. (LINT-98)
+
+1
+set filename [format "%s%s"  $my_toplevel ".syn.v"]
+proc.syn.v
+write -hierarchy -f verilog $my_toplevel -output synth/$filename
+Writing verilog file '/afs/cs.wisc.edu/u/p/r/prayag/private/cs552/project/demo2/verilog/synth/proc.syn.v'.
+Warning: Bus naming style currently specified as %s<%d>, verilog syntax requires bus naming style to be "[]".  (VO-13)
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 21 nets to module proc using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+set filename [format "%s%s"  $my_toplevel ".ddc"]
+proc.ddc
+write -hierarchy -format ddc -output synth/$filename
+Writing ddc file 'synth/proc.ddc'.
+1
+report_hierarchy > synth/hierarchy.txt
+report_reference > synth/reference_report.txt
+report_area > synth/area_report.txt
+report_cell > synth/cell_report.txt
+report_timing -max_paths 20 > synth/timing_report.txt
+report_power > synth/power_report.txt
+quit
+
+Memory usage for this session 151 Mbytes.
+Memory usage for this session including child processes 151 Mbytes.
+CPU usage for this session 74 seconds ( 0.02 hours ).
+Elapsed time for this session 76 seconds ( 0.02 hours ).
+
+Thank you...

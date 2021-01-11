@@ -9,7 +9,10 @@ The WISC-SP13 architecture is similar to the MIPS R2000 in the way it includes a
 ## demo 1: Unpiplined Design
 Demo 1 uses a single cycle perfect memory to create an unpiplined implementation of our microprocessor. We use two individual memory modules, one for instruction and one for data, to achieve instruction fetched and data reads/writes in the same cycle.
 
-## demo 2
+## demo 2: Pipelined Design
+Demo 2 uses a single cycle perfect memory to create a pipelined implementation of our microprocessor. Along with pipelining, the microprocessor also correctly detects and fixes pipeline hazards by stalling.
+
+There is also `intruction_timeline.pdf` which is a behavioral breakdown of an example assembly program that would run on the pipelined design.
 
 ## cache
 
