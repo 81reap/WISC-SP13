@@ -1,13 +1,13 @@
 # WISC-SP13
-Term project for [CS 552](http://pages.cs.wisc.edu/~karu/courses/cs552/fall2020/wiki/index.php/Main/HomePage). Complete functional design of a microprocessor called the WISC-SP13 and cache modules written in Verilog. Project information provide by the instructors of this class was adapted and changed to make this readme.
+Term project for [CS 552](http://pages.cs.wisc.edu/~karu/courses/cs552/fall2020/wiki/index.php/Main/HomePage). Complete functional design of a microprocessor called the WISC-SP13 and cache modules written in Verilog. Project information provide by the instructors of this class was adapted and changed to make this README.
 
-In order to run the processor, you will need a deveoplent enviroment simmilar to the CS Lab machines at UW Madison. Unfortunatly I do not know how set this up, and cannot distrubute a Docker image as a paid licence is needed to run some of the programs used.
+In order to run the processor, you will need a development environment similar to the CS Lab machines at UW Madison. Unfortunately I do not know how set this up, and cannot distribute a Docker image as a paid licenses are needed to run some of the programs used.
 
 ## Micro architecture Specifications
-The WISC-SP13 architecture is similar to the MIPS R2000 in the way it includes a load/store architecture and three fixed-length instruction formats. WISC-SP13 is diffrent from MIPS R2000 due to the smaller instruction set and use 16-bit words.
+The WISC-SP13 architecture is similar to the MIPS R2000 in the way it includes a load/store architecture and three fixed-length instruction formats. WISC-SP13 is different from MIPS R2000 due to the smaller instruction set and use 16-bit words.
 
 ## demo 1: Unpiplined Design
-Demo 1 uses a single cycle perfect memory to create an unpiplined implemetnation of our microprocessor. We use two indivendual memory modules, one for instruction and one for data, to achive instruction fetched and data reads/writes in the same cycle.
+Demo 1 uses a single cycle perfect memory to create an unpiplined implementation of our microprocessor. We use two individual memory modules, one for instruction and one for data, to achieve instruction fetched and data reads/writes in the same cycle.
 
 ## demo 2
 
@@ -31,7 +31,7 @@ note: I was unable to implement the extra credit sciic instruction.
 | 10000 sss ddd iiiii  | ST Rd, Rs, imm    | Mem[Rs + I(sign ext.)] &#8592; Rd |
 | 10001 sss ddd iiiii  | LD Rd, Rs, imm    | Rd &#8592; Mem[Rs + I(sign ext.)] |
 | 10011 sss ddd iiiii  | STU Rd, Rs, imm   | Mem[Rs + I(sign ext.)] &#8592; Rd<br />Rs &#8592; Rs + I(sign ext.) |
-| 11001 sss xxx ddd xx | BTR Rd, Rs        | Rd[bit i] &#8592; Rs[bit 15-i] for i=0..15 |
+| 11001 sss xxx ddd xx | BTR Rd, Rs        | Rd[i] &#8592; Rs[15-i] for i=0..15 |
 | 11011 sss ttt ddd 00 | ADD Rd, Rs, Rt    | Rd &#8592; Rs + Rt |
 | 11011 sss ttt ddd 01 | SUB Rd, Rs, Rt    | Rd &#8592; Rt - Rs |
 | 11011 sss ttt ddd 10 | XOR Rd, Rs, Rt    | Rd &#8592; Rs XOR Rt |
@@ -53,4 +53,5 @@ note: I was unable to implement the extra credit sciic instruction.
 | 00100 ddddddddddd    | J displacement    | PC &#8592; PC + 2 + D(sign ext.) |
 | 00101 sss iiiiiiii   | JAL displacement  | R7 &#8592; PC + 2<br />PC &#8592; PC + 2 + D(sign ext.) |
 | 00111 sss iiiiiiii   | JALR Rs, imm      | R7 &#8592; PC + 2<br />PC &#8592; Rs + I(sign ext.) |
+| 00010 sss xxxxxxxx   | siic Rs           | produce IllegalOp exception<br />note: currently not working] |
 | 00010 sss xxxxxxxx   | NOP / RTI         |  |
