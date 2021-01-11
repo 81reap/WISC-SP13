@@ -1,0 +1,2762 @@
+ 
+****************************************
+Report : hierarchy
+Design : proc
+Version: Q-2019.12-SP3
+Date   : Wed Nov 11 00:17:07 2020
+****************************************
+
+proc
+    BUFX2                               gscl45nm
+    BUFX4                               gscl45nm
+    INVX1                               gscl45nm
+    INVX8                               gscl45nm
+    decode
+        BUFX2                           gscl45nm
+        BUFX4                           gscl45nm
+        INVX1                           gscl45nm
+        INVX2                           gscl45nm
+        INVX4                           gscl45nm
+        INVX8                           gscl45nm
+        control
+            AND2X1                      gscl45nm
+            AND2X2                      gscl45nm
+            AOI21X1                     gscl45nm
+            BUFX2                       gscl45nm
+            INVX1                       gscl45nm
+            INVX4                       gscl45nm
+            INVX8                       gscl45nm
+            MUX2X1                      gscl45nm
+            NAND3X1                     gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            OR2X2                       gscl45nm
+        mux4_1_3b
+            mux4_1_96
+                mux2_1_320
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_321
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_322
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_97
+                mux2_1_323
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_324
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_325
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_98
+                mux2_1_326
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_327
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_328
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+        rf
+            AND2X2                      gscl45nm
+            BUFX2                       gscl45nm
+            BUFX4                       gscl45nm
+            INVX1                       gscl45nm
+            INVX2                       gscl45nm
+            INVX4                       gscl45nm
+            INVX8                       gscl45nm
+            decode3_8
+                AND2X2                  gscl45nm
+                INVX1                   gscl45nm
+                NOR3X1                  gscl45nm
+                OR2X2                   gscl45nm
+            mux8_1_0
+                mux2_1_288
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_0
+                    mux2_1_0
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_1
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_2
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_1
+                    mux2_1_3
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_4
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_5
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_1
+                INVX1                   gscl45nm
+                mux2_1_289
+                    AND2X2              gscl45nm
+                    INVX1               gscl45nm
+                mux4_1_2
+                    mux2_1_6
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_7
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_8
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_3
+                    mux2_1_9
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_10
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_11
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_2
+                mux2_1_290
+                    AOI22X1             gscl45nm
+                    INVX1               gscl45nm
+                mux4_1_4
+                    mux2_1_12
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_13
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_14
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_5
+                    mux2_1_15
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_16
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_17
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_3
+                mux2_1_291
+                    AOI22X1             gscl45nm
+                    INVX1               gscl45nm
+                mux4_1_6
+                    mux2_1_18
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_19
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_20
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_7
+                    BUFX2               gscl45nm
+                    mux2_1_21
+                        AND2X2          gscl45nm
+                        INVX1           gscl45nm
+                    mux2_1_22
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_23
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_4
+                mux2_1_292
+                    AOI22X1             gscl45nm
+                    INVX1               gscl45nm
+                mux4_1_8
+                    mux2_1_24
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_25
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_26
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_9
+                    mux2_1_27
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_28
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_29
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_5
+                mux2_1_293
+                    AOI22X1             gscl45nm
+                    INVX1               gscl45nm
+                mux4_1_10
+                    mux2_1_30
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_31
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_32
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_11
+                    mux2_1_33
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_34
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_35
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_6
+                mux2_1_294
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_12
+                    mux2_1_36
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_37
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_38
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_13
+                    mux2_1_39
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_40
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_41
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_7
+                mux2_1_295
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_14
+                    mux2_1_42
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_43
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_44
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_15
+                    mux2_1_45
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_46
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_47
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_8
+                mux2_1_296
+                    AOI22X1             gscl45nm
+                    BUFX2               gscl45nm
+                    INVX1               gscl45nm
+                mux4_1_16
+                    mux2_1_48
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_49
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_50
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_17
+                    mux2_1_51
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_52
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_53
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_9
+                mux2_1_297
+                    AOI22X1             gscl45nm
+                    BUFX2               gscl45nm
+                    INVX1               gscl45nm
+                mux4_1_18
+                    mux2_1_54
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_55
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_56
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_19
+                    INVX1               gscl45nm
+                    mux2_1_57
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_58
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_59
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_10
+                mux2_1_298
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_20
+                    mux2_1_60
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_61
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_62
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_21
+                    mux2_1_63
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_64
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_65
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_11
+                mux2_1_299
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_22
+                    mux2_1_66
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_67
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_68
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_23
+                    mux2_1_69
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_70
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_71
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_12
+                mux2_1_300
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_24
+                    mux2_1_72
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_73
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_74
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_25
+                    mux2_1_75
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_76
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_77
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_13
+                mux2_1_301
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_26
+                    mux2_1_78
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_79
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_80
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_27
+                    mux2_1_81
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_82
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_83
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_14
+                mux2_1_302
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_28
+                    mux2_1_84
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_85
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_86
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_29
+                    mux2_1_87
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_88
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_89
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_15
+                mux2_1_303
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_30
+                    mux2_1_90
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_91
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_92
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_31
+                    mux2_1_93
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_94
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_95
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_16
+                mux2_1_304
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_32
+                    mux2_1_96
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_97
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_98
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_33
+                    mux2_1_99
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_100
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_101
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_17
+                mux2_1_305
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_34
+                    mux2_1_102
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_103
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_104
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_35
+                    mux2_1_105
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_106
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_107
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_18
+                mux2_1_306
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_36
+                    mux2_1_108
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_109
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_110
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_37
+                    mux2_1_111
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_112
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_113
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_19
+                mux2_1_307
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_38
+                    mux2_1_114
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_115
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_116
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_39
+                    mux2_1_117
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_118
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_119
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_20
+                mux2_1_308
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_40
+                    mux2_1_120
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_121
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_122
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_41
+                    mux2_1_123
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_124
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_125
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_21
+                mux2_1_309
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_42
+                    mux2_1_126
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_127
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_128
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_43
+                    mux2_1_129
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_130
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_131
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_22
+                mux2_1_310
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_44
+                    mux2_1_132
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_133
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_134
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_45
+                    mux2_1_135
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_136
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_137
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_23
+                mux2_1_311
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_46
+                    BUFX4               gscl45nm
+                    mux2_1_138
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_139
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_140
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_47
+                    mux2_1_141
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_142
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_143
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_24
+                mux2_1_312
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_48
+                    mux2_1_144
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_145
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_146
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_49
+                    mux2_1_147
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_148
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_149
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_25
+                mux2_1_313
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_50
+                    mux2_1_150
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_151
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_152
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_51
+                    mux2_1_153
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_154
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_155
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_26
+                mux2_1_314
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_52
+                    mux2_1_156
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_157
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_158
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_53
+                    mux2_1_159
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_160
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_161
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_27
+                mux2_1_315
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_54
+                    mux2_1_162
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_163
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_164
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_55
+                    mux2_1_165
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_166
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_167
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_28
+                mux2_1_316
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_56
+                    mux2_1_168
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_169
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_170
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_57
+                    mux2_1_171
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_172
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_173
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_29
+                mux2_1_317
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_58
+                    mux2_1_174
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_175
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_176
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_59
+                    mux2_1_177
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_178
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_179
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_30
+                mux2_1_318
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_60
+                    mux2_1_180
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_181
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_182
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_61
+                    mux2_1_183
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_184
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_185
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            mux8_1_31
+                mux2_1_319
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux4_1_62
+                    mux2_1_186
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_187
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_188
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_63
+                    mux2_1_189
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_190
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_191
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            reg16b_0
+                BUFX2                   gscl45nm
+                dff_0
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_1
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_2
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_3
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_4
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_5
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_6
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_7
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_8
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_9
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_10
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_11
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_12
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_13
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_14
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_15
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_377
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_378
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_379
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_380
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_381
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_382
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_383
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_384
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_385
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_386
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_387
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_388
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_389
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_390
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_391
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_392
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            reg16b_1
+                BUFX2                   gscl45nm
+                dff_16
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_17
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_18
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_19
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_20
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_21
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_22
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_23
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_24
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_25
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_26
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_27
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_28
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_29
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_30
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_31
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_393
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_394
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_395
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_396
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_397
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_398
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_399
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_400
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_401
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_402
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_403
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_404
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_405
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_406
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_407
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_408
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            reg16b_2
+                BUFX2                   gscl45nm
+                dff_32
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_33
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_34
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_35
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_36
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_37
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_38
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_39
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_40
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_41
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_42
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_43
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_44
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_45
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_46
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_47
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_409
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_410
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_411
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_412
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_413
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_414
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_415
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_416
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_417
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_418
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_419
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_420
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_421
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_422
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_423
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_424
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            reg16b_3
+                BUFX2                   gscl45nm
+                dff_48
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_49
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_50
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_51
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_52
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_53
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_54
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_55
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_56
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_57
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_58
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_59
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_60
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_61
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_62
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_63
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_425
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_426
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_427
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_428
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_429
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_430
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_431
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_432
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_433
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_434
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_435
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_436
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_437
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_438
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_439
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_440
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            reg16b_4
+                BUFX2                   gscl45nm
+                dff_64
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_65
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_66
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_67
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_68
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_69
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_70
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_71
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_72
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_73
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_74
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_75
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_76
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_77
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_78
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_79
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_441
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_442
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_443
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_444
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_445
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_446
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_447
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_448
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_449
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_450
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_451
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_452
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_453
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_454
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_455
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_456
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            reg16b_5
+                BUFX2                   gscl45nm
+                dff_80
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_81
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_82
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_83
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_84
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_85
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_86
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_87
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_88
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_89
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_90
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_91
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_92
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_93
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_94
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_95
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_457
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_458
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_459
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_460
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_461
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_462
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_463
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_464
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_465
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_466
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_467
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_468
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_469
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_470
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_471
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_472
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            reg16b_6
+                BUFX2                   gscl45nm
+                dff_96
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_97
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_98
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_99
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_100
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_101
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_102
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_103
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_104
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_105
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_106
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_107
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_108
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_109
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_110
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_111
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_473
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_474
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_475
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_476
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_477
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_478
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_479
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_480
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_481
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_482
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_483
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_484
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_485
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_486
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_487
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_488
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            reg16b_7
+                BUFX2                   gscl45nm
+                dff_112
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_113
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_114
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_115
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                    NOR2X1              gscl45nm
+                dff_116
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_117
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_118
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_119
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_120
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX8               gscl45nm
+                dff_121
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_122
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_123
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_124
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_125
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_126
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                dff_127
+                    AND2X1              gscl45nm
+                    DFFPOSX1            gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_489
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_490
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_491
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_492
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_493
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_494
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_495
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_496
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_497
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_498
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_499
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_500
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_501
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_502
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_503
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_504
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+    execute
+        AND2X2                          gscl45nm
+        AOI21X1                         gscl45nm
+        BUFX2                           gscl45nm
+        BUFX4                           gscl45nm
+        INVX1                           gscl45nm
+        INVX2                           gscl45nm
+        INVX4                           gscl45nm
+        INVX8                           gscl45nm
+        MUX2X1                          gscl45nm
+        OAI21X1                         gscl45nm
+        OR2X2                           gscl45nm
+        alu
+            AND2X1                      gscl45nm
+            AND2X2                      gscl45nm
+            AOI21X1                     gscl45nm
+            AOI22X1                     gscl45nm
+            BUFX2                       gscl45nm
+            BUFX4                       gscl45nm
+            FAX1                        gscl45nm
+            INVX1                       gscl45nm
+            INVX2                       gscl45nm
+            INVX4                       gscl45nm
+            INVX8                       gscl45nm
+            MUX2X1                      gscl45nm
+            NAND3X1                     gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            OR2X1                       gscl45nm
+            OR2X2                       gscl45nm
+            XNOR2X1                     gscl45nm
+            XOR2X1                      gscl45nm
+            cla16_0
+                AND2X2                  gscl45nm
+                INVX1                   gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                cla4_0
+                    AND2X2              gscl45nm
+                    AOI21X1             gscl45nm
+                    AOI22X1             gscl45nm
+                    BUFX2               gscl45nm
+                    INVX1               gscl45nm
+                    INVX2               gscl45nm
+                    INVX8               gscl45nm
+                    MUX2X1              gscl45nm
+                    NAND2X1             gscl45nm
+                    NAND3X1             gscl45nm
+                    NOR3X1              gscl45nm
+                    OAI21X1             gscl45nm
+                    OR2X2               gscl45nm
+                    XNOR2X1             gscl45nm
+                    XOR2X1              gscl45nm
+                cla4_1
+                    AND2X1              gscl45nm
+                    AND2X2              gscl45nm
+                    AOI21X1             gscl45nm
+                    BUFX2               gscl45nm
+                    BUFX4               gscl45nm
+                    INVX1               gscl45nm
+                    INVX2               gscl45nm
+                    INVX8               gscl45nm
+                    MUX2X1              gscl45nm
+                    NAND3X1             gscl45nm
+                    OAI21X1             gscl45nm
+                    OR2X2               gscl45nm
+                    XNOR2X1             gscl45nm
+                    XOR2X1              gscl45nm
+                cla4_2
+                    AND2X2              gscl45nm
+                    AOI21X1             gscl45nm
+                    AOI22X1             gscl45nm
+                    BUFX2               gscl45nm
+                    INVX1               gscl45nm
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                    NAND3X1             gscl45nm
+                    OAI21X1             gscl45nm
+                    OR2X2               gscl45nm
+                    XNOR2X1             gscl45nm
+                    XOR2X1              gscl45nm
+                cla4_3
+                    AND2X2              gscl45nm
+                    AOI21X1             gscl45nm
+                    BUFX2               gscl45nm
+                    INVX1               gscl45nm
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                    NAND3X1             gscl45nm
+                    NOR3X1              gscl45nm
+                    OAI21X1             gscl45nm
+                    OR2X2               gscl45nm
+                    XOR2X1              gscl45nm
+            mux4_1_16b_0
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                INVX4                   gscl45nm
+                mux4_1_64
+                    mux2_1_192
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_193
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_194
+                        INVX1           gscl45nm
+                        INVX8           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_65
+                    mux2_1_195
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_196
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_197
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_66
+                    mux2_1_198
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_199
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_200
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_67
+                    mux2_1_201
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_202
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_203
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_68
+                    mux2_1_204
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_205
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_206
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_69
+                    mux2_1_207
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_208
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_209
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_70
+                    mux2_1_210
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_211
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_212
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_71
+                    mux2_1_213
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_214
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_215
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_72
+                    mux2_1_216
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_217
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_218
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_73
+                    mux2_1_219
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_220
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_221
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_74
+                    mux2_1_222
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_223
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_224
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_75
+                    mux2_1_225
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_226
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_227
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_76
+                    mux2_1_228
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_229
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_230
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_77
+                    mux2_1_231
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_232
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_233
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_78
+                    mux2_1_234
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_235
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_236
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                mux4_1_79
+                    mux2_1_237
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_238
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+                    mux2_1_239
+                        INVX1           gscl45nm
+                        MUX2X1          gscl45nm
+            shifter_0
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                AOI22X1                 gscl45nm
+                BUFX2                   gscl45nm
+                BUFX4                   gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                INVX4                   gscl45nm
+                INVX8                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+            shifter_1
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                AOI22X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                INVX4                   gscl45nm
+                INVX8                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+        branch_logic
+            AND2X2                      gscl45nm
+            AOI21X1                     gscl45nm
+            BUFX2                       gscl45nm
+            INVX1                       gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            OR2X2                       gscl45nm
+        cla16_1
+            AND2X1                      gscl45nm
+            AOI21X1                     gscl45nm
+            BUFX2                       gscl45nm
+            INVX1                       gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            cla4_4
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                FAX1                    gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_5
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_6
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_7
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+        cla16_2
+            AND2X1                      gscl45nm
+            AOI21X1                     gscl45nm
+            BUFX2                       gscl45nm
+            BUFX4                       gscl45nm
+            INVX1                       gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            cla4_8
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                XNOR2X1                 gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_9
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                AOI22X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                MUX2X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X1                   gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_10
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_11
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+        jump_logic
+            AND2X2                      gscl45nm
+            BUFX2                       gscl45nm
+            INVX1                       gscl45nm
+            INVX4                       gscl45nm
+            INVX8                       gscl45nm
+            NAND3X1                     gscl45nm
+            OR2X2                       gscl45nm
+        mux4_1_16b_2
+            BUFX2                       gscl45nm
+            BUFX4                       gscl45nm
+            INVX1                       gscl45nm
+            INVX4                       gscl45nm
+            mux4_1_80
+                mux2_1_240
+                    AOI22X1             gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_241
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_242
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_81
+                mux2_1_243
+                    AOI22X1             gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_244
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_245
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_82
+                mux2_1_246
+                    AOI22X1             gscl45nm
+                    BUFX2               gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_247
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_248
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_83
+                mux2_1_249
+                    AOI22X1             gscl45nm
+                    BUFX2               gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_250
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_251
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_84
+                mux2_1_252
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_253
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_254
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_85
+                mux2_1_255
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_256
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_257
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_86
+                INVX1                   gscl45nm
+                mux2_1_258
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_259
+                    AND2X2              gscl45nm
+                    INVX1               gscl45nm
+                mux2_1_260
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_87
+                mux2_1_261
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_262
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_263
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_88
+                mux2_1_264
+                    INVX1               gscl45nm
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_265
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_266
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_89
+                BUFX2                   gscl45nm
+                mux2_1_267
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_268
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_269
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_90
+                mux2_1_270
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_271
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_272
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_91
+                mux2_1_273
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_274
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_275
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_92
+                mux2_1_276
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_277
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_278
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_93
+                mux2_1_279
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_280
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_281
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_94
+                mux2_1_282
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_283
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_284
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_95
+                mux2_1_285
+                    INVX2               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_286
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_287
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+    fetch
+        BUFX2                           gscl45nm
+        INVX1                           gscl45nm
+        cla16_3
+            AND2X1                      gscl45nm
+            AOI21X1                     gscl45nm
+            BUFX2                       gscl45nm
+            INVX1                       gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            cla4_12
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI22X1                 gscl45nm
+                FAX1                    gscl45nm
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND2X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_13
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI22X1                 gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND2X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_14
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                MUX2X1                  gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+            cla4_15
+                AND2X1                  gscl45nm
+                AND2X2                  gscl45nm
+                AOI21X1                 gscl45nm
+                BUFX2                   gscl45nm
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                MUX2X1                  gscl45nm
+                NAND3X1                 gscl45nm
+                NOR3X1                  gscl45nm
+                OAI21X1                 gscl45nm
+                OR2X1                   gscl45nm
+                OR2X2                   gscl45nm
+                XOR2X1                  gscl45nm
+        memory2c_1
+            AND2X1                      gscl45nm
+            AND2X2                      gscl45nm
+            AOI21X1                     gscl45nm
+            AOI22X1                     gscl45nm
+            BUFX2                       gscl45nm
+            BUFX4                       gscl45nm
+            DFFPOSX1                    gscl45nm
+            INVX1                       gscl45nm
+            INVX2                       gscl45nm
+            INVX4                       gscl45nm
+            INVX8                       gscl45nm
+            NAND2X1                     gscl45nm
+            NAND3X1                     gscl45nm
+            NOR2X1                      gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            OR2X1                       gscl45nm
+            OR2X2                       gscl45nm
+            XNOR2X1                     gscl45nm
+            XOR2X1                      gscl45nm
+        reg16b_8
+            BUFX2                       gscl45nm
+            INVX1                       gscl45nm
+            INVX4                       gscl45nm
+            dff_128
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_129
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_130
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_131
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_132
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_133
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_134
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_135
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_136
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_137
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_138
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_139
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_140
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_141
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_142
+                DFFPOSX1                gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            dff_143
+                DFFSR                   gscl45nm
+                INVX1                   gscl45nm
+                NOR2X1                  gscl45nm
+            mux2_1_505
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_506
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_507
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_508
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_509
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_510
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_511
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_512
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_513
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_514
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_515
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_516
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_517
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_518
+                INVX1                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_519
+                INVX1                   gscl45nm
+                INVX8                   gscl45nm
+                MUX2X1                  gscl45nm
+            mux2_1_520
+                INVX1                   gscl45nm
+                INVX2                   gscl45nm
+                MUX2X1                  gscl45nm
+    memory
+        BUFX2                           gscl45nm
+        BUFX4                           gscl45nm
+        INVX1                           gscl45nm
+        OR2X2                           gscl45nm
+        memory2c_0
+            AND2X1                      gscl45nm
+            AND2X2                      gscl45nm
+            AOI21X1                     gscl45nm
+            AOI22X1                     gscl45nm
+            BUFX2                       gscl45nm
+            BUFX4                       gscl45nm
+            DFFPOSX1                    gscl45nm
+            INVX1                       gscl45nm
+            INVX2                       gscl45nm
+            INVX4                       gscl45nm
+            INVX8                       gscl45nm
+            MUX2X1                      gscl45nm
+            NAND2X1                     gscl45nm
+            NAND3X1                     gscl45nm
+            NOR2X1                      gscl45nm
+            NOR3X1                      gscl45nm
+            OAI21X1                     gscl45nm
+            OR2X1                       gscl45nm
+            OR2X2                       gscl45nm
+            XNOR2X1                     gscl45nm
+    write_back
+        mux4_1_16b_1
+            BUFX2                       gscl45nm
+            INVX1                       gscl45nm
+            INVX8                       gscl45nm
+            mux4_1_99
+                mux2_1_329
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_330
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_331
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_100
+                mux2_1_332
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_333
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_334
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_101
+                mux2_1_335
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_336
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_337
+                    AND2X1              gscl45nm
+                    INVX1               gscl45nm
+                    OAI21X1             gscl45nm
+            mux4_1_102
+                mux2_1_338
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_339
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_340
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_103
+                mux2_1_341
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_342
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_343
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_104
+                mux2_1_344
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_345
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_346
+                    AND2X2              gscl45nm
+                    INVX1               gscl45nm
+                    OAI21X1             gscl45nm
+            mux4_1_105
+                mux2_1_347
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_348
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_349
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_106
+                mux2_1_350
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_351
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_352
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_107
+                mux2_1_353
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_354
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_355
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_108
+                mux2_1_356
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_357
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_358
+                    INVX1               gscl45nm
+                    INVX8               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_109
+                mux2_1_359
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_360
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_361
+                    INVX1               gscl45nm
+                    INVX8               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_110
+                mux2_1_362
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_363
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_364
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_111
+                mux2_1_365
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_366
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_367
+                    INVX1               gscl45nm
+                    INVX8               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_112
+                mux2_1_368
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_369
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_370
+                    INVX1               gscl45nm
+                    INVX8               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_113
+                mux2_1_371
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_372
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_373
+                    INVX1               gscl45nm
+                    INVX8               gscl45nm
+                    MUX2X1              gscl45nm
+            mux4_1_114
+                mux2_1_374
+                    INVX1               gscl45nm
+                    INVX4               gscl45nm
+                    MUX2X1              gscl45nm
+                mux2_1_375
+                    INVX1               gscl45nm
+                    OR2X2               gscl45nm
+                mux2_1_376
+                    INVX1               gscl45nm
+                    MUX2X1              gscl45nm
+1
